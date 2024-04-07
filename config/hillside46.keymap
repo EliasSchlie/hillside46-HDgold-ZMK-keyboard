@@ -264,11 +264,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL &kp LSHFT>,
+                <&kp LCTRL>,
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_release>,
-                <&kp LCTRL &kp LSHFT>;
+                <&kp LCTRL>;
         };
         pg_l_com: pg_l_com {
             compatible = "zmk,behavior-macro";
@@ -463,7 +463,7 @@
             mods = <(MOD_LALT|MOD_RALT)>;
         };
 
-      bsp3: bsp3 {
+        bsp3: bsp3 {
                 compatible = "zmk,behavior-mod-morph";
                 label = "BSP3";
                 #binding-cells = <0>;
@@ -471,14 +471,14 @@
                 mods = <(MOD_LCTL|MOD_RCTL)>;
             };
             
-            bsp4: bsp4 {
-                compatible = "zmk,behavior-mod-morph";
-                label = "BSP4";
-                #binding-cells = <0>;
-                bindings = <&bsp3>, <&kp TAB>;
-                mods = <(MOD_LALT|MOD_RALT)>;
-                keep-mods = <(MOD_LALT|MOD_RALT)>;
-            };
+        bsp4: bsp4 {
+           compatible = "zmk,behavior-mod-morph";
+            label = "BSP4";
+            #binding-cells = <0>;
+            bindings = <&bsp3>, <&kp TAB>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LALT|MOD_RALT)>;
+        };
 
         // Win
             bsp1: bsp1 {
