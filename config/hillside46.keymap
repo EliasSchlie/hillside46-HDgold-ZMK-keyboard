@@ -258,6 +258,30 @@
                 <&macro_release>,
                 <&kp LSHIFT>;
         };
+        pg_r_com: pg_r_com {
+            compatible = "zmk,behavior-macro";
+            label = "PG_R_COM";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LCTRL &kp LSHFT>;
+        };
+        pg_l_com: pg_l_com {
+            compatible = "zmk,behavior-macro";
+            label = "PG_L_COM";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LCTRL &kp LSHFT>;
+        };
         // Other ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
          schnell_sch: schnell {
              label = "Schau_mal";
@@ -428,14 +452,14 @@
             compatible = "zmk,behavior-mod-morph";
             label = "PG_LEFT";
             #binding-cells = <0>;
-            bindings = <&kp HOME>, <&kp LC(LS(TAB))>;
+            bindings = <&kp HOME>, <&pg_l_com >;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
         pg_r: PG_RIGHT {
             compatible = "zmk,behavior-mod-morph";
             label = "PG_RIGHT";
             #binding-cells = <0>;
-            bindings = <&kp END>, <&kp LC(TAB)>;
+            bindings = <&kp END>, <&pg_r_com >;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
 
