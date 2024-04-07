@@ -11,778 +11,157 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "german-keymap.h"
 
-// Mac
-#define HDVB_L   0
-#define CURSER_L 1
-#define NUM_L    2
-#define F_L      3
-#define NAV_L    4
-#define SYM_L    5
-#define COM_L    6
+#define DVORAK_L 0
+#define QWERTY_L 1
+#define COLEMK_L 2
+#define NAV_L    3
+#define SYM_L    4
+#define ADJ_L    5
+#define Undo   LC(Z)
+#define Cut    LC(X)
+#define Copy   LC(C)
+#define Paste  LC(V)
+#define Redo   LC(Y)
 
-// Win
-#define wHDVB_L   7
-#define wCURSER_L 8
-#define wNUM_L    9
-#define wF_L      10
-#define wNAV_L    10
-#define wSYM_L    12
-
-#define UML_L    13
-#define ADJ_L    14
-
-
-#define LEFT_ROW_0       0  1  2  3  4  5  
-#define LEFT_ROW_1      12 13 14 15 16 17
-#define LEFT_ROW_2      24 25 26 27 28 29
-#define LEFT_ROW_3               38 39 40 41 30
-#define RIGT_ROW_0                         6  7  8  9 10 11
-#define RIGT_ROW_1                        18 19 20 21 22 23
-#define RIGT_ROW_2                        32 33 34 35 36 37
-#define RIGT_ROW_3                  31 42 43 44 45
-#define LEFT_ROWS_012   LEFT_ROW_0 LEFT_ROW_1 LEFT_ROW_2
-#define RIGT_ROWS_012   RIGT_ROW_0 RIGT_ROW_1 RIGT_ROW_2
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 / {
-
- // MACRO ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
     macros {
-        
-	    spc_sh: space_shift_macro {
-	        compatible = "zmk,behavior-macro";
-        	label = "MACRO1";
-	        #binding-cells = <0>;
-        	bindings = <&macro_tap &kp SPACE &skq RSHIFT>;
-	    };
-
-	    comm_l: comm_l {
-	        compatible = "zmk,behavior-macro";
-        	label = "COMMAND_Layer";
-	        #binding-cells = <0>;
-        	wait-ms = <0>;
-            tap-ms = <0>;
-            bindings 
-                = <&macro_press &kp LGUI &mo COM_L>
-                , <&macro_pause_for_release>
-                , <&macro_release &kp LGUI &mo COM_L>;
-	    };
-        
-        // Arrows ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-            upupup: upupup {
-             label = "UPUPUP";
-             compatible = "zmk,behavior-macro";
-             #binding-cells = <0>;
-             wait-ms = <0>;
-             tap-ms = <0>;
-             bindings
-                 = <&macro_tap &kp UP &kp UP &kp UP &kp UP &kp UP>
-                 ;
-         };
-         downdown: downdown {
-             label = "DOWNDOWN";
-             compatible = "zmk,behavior-macro";
-             #binding-cells = <0>;
-             wait-ms = <0>;
-             tap-ms = <0>;
-             bindings
-                 = <&macro_tap &kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN>
-                 ;
-         };
-         rightright: rightright {
-             label = "RIGHTRIGHT";
-             compatible = "zmk,behavior-macro";
-             #binding-cells = <0>;
-             wait-ms = <0>;
-             tap-ms = <0>;
-             bindings
-                 = <&macro_tap &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>
-                 ;
-         };
-         leftleft: leftleft {
-             label = "LEFTLEFT";
-             compatible = "zmk,behavior-macro";
-             #binding-cells = <0>;
-             wait-ms = <0>;
-             tap-ms = <0>;
-             bindings
-                 = <&macro_tap &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
-                 ;
-         };
-        // Enclose ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-         kp_qu: kpqu {
-             label = "Key_QU";
-             compatible = "zmk,behavior-macro";
-             #binding-cells = <0>;
-             wait-ms = <0>;
-             tap-ms = <0>;
-             bindings = <&macro_tap &kp Q>
-                 , <&macro_release &kp LSHFT>
-                 , <&macro_release &kp RSHFT>
-                 , <&macro_tap &kp U>
-                 ;
-         };
-         SQT_close: SQT_close {
-             label = "SQT_closer";
-             compatible = "zmk,behavior-macro";
-             #binding-cells = <0>;
-             wait-ms = <0>;
-             tap-ms = <0>;
-             bindings = <&macro_tap &kp LG(X) &kp SQT &kp SQT &kp LEFT &kp LG(V)>
-                 ;
-         };
-         PAR_close: PAR_close {
-             label = "PAR_closer";
-             compatible = "zmk,behavior-macro";
-             #binding-cells = <0>;
-             wait-ms = <0>;
-             tap-ms = <0>;
-             bindings = <&macro_tap &kp LG(X) &kp LPAR &kp RPAR &kp LEFT &kp LG(V)>
-                 ;
-         };
-         DQT_close: DQT_close {
-             label = "DQT_closer";
-             compatible = "zmk,behavior-macro";
-             #binding-cells = <0>;
-             wait-ms = <0>;
-             tap-ms = <0>;
-             bindings = <&macro_tap &kp LG(X) &kp DQT &kp DQT &kp LEFT &kp LG(V)>
-                 ;
-         };
-        // Signs ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-         EURO: euro {
-             label = "EURO";
-             compatible = "zmk,behavior-macro";
-             #binding-cells = <0>;
-             wait-ms = <0>;
-             tap-ms = <0>;
-             bindings = <&macro_press &kp LALT>
-                 , <&macro_tap &kp N0 &kp N1 &kp N2 &kp N8>
-                 , <&macro_release &kp LALT>
-                 ;
-         };
-         accent_a_macro: accent_a_macro {
+        ch_lng_lt: ch_lng_lt {
+            label = "CH_LNG_LT";
             compatible = "zmk,behavior-macro";
-            label = "new_macro";
             #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             bindings =
                 <&macro_press>,
-                <&kp RALT &kp RSHFT>,
+                <&tog 1 &kp LSHIFT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N5>,
+                <&kp LALT>,
+                <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp RSHFT &kp RALT>;
-        };
-        a_uml: a_uml {
-            compatible = "zmk,behavior-macro";
-            label = "A_UML";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT &kp U>,
-                <&macro_release>,
-                <&kp U &kp LALT>,
-                <&macro_tap>,
-                <&kp A>;
-        };
-        o_uml: o_uml {
-            compatible = "zmk,behavior-macro";
-            label = "O_UML";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT &kp U>,
-                <&macro_release>,
-                <&kp U &kp LALT>,
-                <&macro_tap>,
-                <&kp O>;
-        };
-        u_uml: u_uml {
-            compatible = "zmk,behavior-macro";
-            label = "U_UML";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT &kp U>,
-                <&macro_release>,
-                <&kp U &kp LALT>,
-                <&macro_tap>,
-                <&kp U>;
-        };
-        a_cap_uml: a_cap_uml {
-            compatible = "zmk,behavior-macro";
-            label = "A_CAP_UML";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT &kp U>,
-                <&macro_release>,
-                <&kp U &kp LALT>,
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp A>,
-                <&macro_release>,
-                <&kp LSHIFT>;
-        };
-        o_cap_uml: o_cap_uml {
-            compatible = "zmk,behavior-macro";
-            label = "O_CAP_UML";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT &kp U>,
-                <&macro_release>,
-                <&kp U &kp LALT>,
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp O>,
-                <&macro_release>,
-                <&kp LSHIFT>;
-        };
-        u_cap_uml: u_cap_uml {
-            compatible = "zmk,behavior-macro";
-            label = "U_CAP_UML";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT &kp U>,
-                <&macro_release>,
-                <&kp U &kp LALT>,
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp U>,
-                <&macro_release>,
-                <&kp LSHIFT>;
-        };
-        // Other ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-         schnell_sch: schnell {
-             label = "Schau_mal";
-             compatible = "zmk,behavior-macro";
-             #binding-cells = <0>;
-             wait-ms = <0>;
-             tap-ms = <0>;
-             bindings = <&macro_tap &kp LG(X) &kp SQT &kp SQT &kp LEFT &kp LG(V)>
-                 ;
-         };
-    };
-
-    behaviors {
-
-     // Home row mods ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-        h_h: hold_tap_hold_prefered {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_HP";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
-            flavor = "hold-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-        h_b: ht_bl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_BL";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
-        h_t: ht_tp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_TP";
-            #binding-cells = <2>;
-            tapping-term-ms = <120>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-        hm_f: homerow_mods_fast {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_FAST";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "hold-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
-        hm_l: layer-homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_L";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
-        };
-        gui_l: gui_l {
-            compatible = "zmk,behavior-hold-tap";
-            label = "GUI_LAYER";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&comm_l>, <&kp>;
-        };
-     // special Linger ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-        spsh_l: space_shift_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "space_shift_layer";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&caps_word>, <&spc_sh>;
-        };
-
-        lk_qu: lk_qu {
-            compatible = "zmk,behavior-hold-tap";
-            label = "lk_qu";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp_qu>;
-        };
-        
-     // Encloser ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-        SQT_cl: SQT_cl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SQT_clr";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&SQT_close>, <&kp>;
-        };
-        PAR_cl: PAR_cl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "PAR_clr";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&PAR_close>, <&kp>;
-        };
-        DQT_cl: DQT_cl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DQT_clr";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&DQT_close>, <&kp>;
-        };
-        a_um: a_um {
-            compatible = "zmk,behavior-hold-tap";
-            label = "A_UM";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&a_uml>;
-        };
-        o_um: o_um {
-            compatible = "zmk,behavior-hold-tap";
-            label = "O_UM";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&o_uml>;
-        };
-        u_um: u_um {
-            compatible = "zmk,behavior-hold-tap";
-            label = "U_UM";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&u_uml>;
-        };
-     // MOD MORPH ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-        
-
-        comma_par: comma_par {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_par";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&PAR_cl LPAR LPAR>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        sqt_at: SQTDQT {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SQTDQT";
-            #binding-cells = <0>;
-            bindings = <&SQT_cl SQT SQT>, <&kp AT_SIGN>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        pg_l: PG_LEFT {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PG_LEFT";
-            #binding-cells = <0>;
-            bindings = <&kp HOME>, <&kp LS(LC(TAB))>;
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-        pg_r: PG_RIGHT {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PG_RIGHT";
-            #binding-cells = <0>;
-            bindings = <&kp END>, <&kp LC(TAB)>;
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-
-      bsp3: bsp3 {
-                compatible = "zmk,behavior-mod-morph";
-                label = "BSP3";
-                #binding-cells = <0>;
-                bindings = <&kp LA(BSPC)>, <&kp BSPC>;
-                mods = <(MOD_LCTL|MOD_RCTL)>;
-            };
-            
-            bsp4: bsp4 {
-                compatible = "zmk,behavior-mod-morph";
-                label = "BSP4";
-                #binding-cells = <0>;
-                bindings = <&bsp3>, <&kp TAB>;
-                mods = <(MOD_LALT|MOD_RALT)>;
-                keep-mods = <(MOD_LALT|MOD_RALT)>;
-            };
-
-        // Win
-            bsp1: bsp1 {
-                compatible = "zmk,behavior-mod-morph";
-                label = "BSP1";
-                #binding-cells = <0>;
-                bindings = <&kp LC(BSPC)>, <&kp BSPC>;
-                mods = <(MOD_LCTL|MOD_RCTL)>;
-            };
-            
-            bsp2: bsp2 {
-                compatible = "zmk,behavior-mod-morph";
-                label = "BSP2";
-                #binding-cells = <0>;
-                bindings = <&bsp1>, <&kp TAB>;
-                mods = <(MOD_LALT|MOD_RALT)>;
-                keep-mods = <(MOD_LALT|MOD_RALT)>;
-            };
-
-        del1: del1 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DEL1";
-            #binding-cells = <0>;
-            bindings = <&kp DEL>, <&kp LC(DEL)>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-     // Sticky keys ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-        skq: sticky_key_quick_release {
-            compatible = "zmk,behavior-sticky-key";
-            label = "STICKY_KEY_QUICK_RELEASE";
-            #binding-cells = <1>;
-            bindings = <&kp>;
-            release-after-ms = <1000>;
-            quick-release;
+                <&tog 1 &kp LSHIFT>;
         };
     };
-
-
- // Combo ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-    combos {
-        compatible = "zmk,combos";
-        
-        combo_z {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&kp Z>;
-            layers = <0>;
-        };
-
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <14 15 16>;
-            bindings = <&kp ESC>;
-        };
-
-        combo_qu {
-            timeout-ms = <50>;
-            key-positions = <2 4>;
-            bindings = <&lk_qu Q U>;
-            layers = <0>;
-        };
-
-        combo_COLON {
-            timeout-ms = <50>;
-            key-positions = <8 9>;
-            bindings = <&kp COLON>;
-        };
-
-        combo_SEMI {
-            timeout-ms = <50>;
-            key-positions = <7 8>;
-            bindings = <&kp SEMI>;
-        };
-
-        combo_ques {
-            timeout-ms = <50>;
-            key-positions = <9 10>;
-            bindings = <&kp QMARK>;
-        };
-
-        combo_excl {
-            timeout-ms = <50>;
-            key-positions = <7 10>;
-            bindings = <&kp EXCL>;
-        };
-
-        combo_brac {
-            timeout-ms = <50>;
-            key-positions = <18 19>;
-            bindings = <&PAR_cl LPAR LPAR>;
-        };
-
-    };
-
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 };
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    behaviors {
+        td: tapdance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPDANCE";
+            bindings = <&kp>, <&kp>;
 
-                default_layer {
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
+    };
 
-                        bindings = <
-&none         &kp  W        &kp  X        &kp  M        &kp  G        &kp  J                                                                         &kp  HASH  &kp  DOT   &hm RBKT LBKT &DQT_cl DQT DQT &sqt_at          &kp DEL
-&kp  TAB      &hm_l NAV_L C &hm LCTRL S   &hm LALT N    &gui_l A T    &kp  K                                                                         &comma_par    &gui_l A A    &hm LALT  E   &hm LCTRL  I   &hm_l NUM_L H    &kp  ENTER
-&none         &kp  P        &kp  F        &kp  L        &kp  D        &kp  V        &mo  ADJ_L                                         &none         &kp MINUS  &kp  U        &kp  O        &kp  Y     &kp  B           &none
-                                                        &kp DEL         &kp BSPC         &hm_l SYM_L R    &h_h LG(LC(LALT)) LS(LA(LG(LC(F19))))               &h_h LG(LC(LS(LALT))) LS(LA(LG(LC(F20))))  &h_b LSHIFT  SPACE  &spc_sh &kp C_PLAY_PAUSE
-                        >;
-			
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-		
-                curser_layer {
+    combos { compatible = "zmk,combos"; };
 
-                        bindings = <
-&kp  GRAVE    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
-&kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  ENTER  
-&none         &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &mo  ADJ_L                                         &caps_word    &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  SQT
-                                                        &none         &kp  LALT     &sk  LSHIFT    &mo  NAV_L            &trans        &kp  SPACE    &kp  LALT     &none
-                        >;
-			
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-		
-                num_layer {
+    keymap {
+        compatible = "zmk,keymap";
 
-                        bindings = <
-&trans        &kp  GRAVE    &kp  N7       &kp  N8       &kp  N9        &kp  PERCENT                                                                     &trans        &trans       &trans           &trans         &trans       &trans        
-&trans        &hm_l NAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3   &kp  GT                                                                          &trans        &a_um  LGUI A    &hm LALT PLUS     &hm LCTRL LA(S) &none        &trans        
-&trans        &kp  Z        &kp  N4       &kp  N5       &kp  N6        &kp  LA(LS(NUMBER_2))  &trans                                             &trans          &trans        &u_um  LGUI U        &o_um  LGUI O       &trans       &trans       &trans        
-                                                        &trans         &trans        &hm_l SYM_L RETURN    &trans            &trans     &hm_l  UML_L SPACE     &hm_l F_L SPACE  &trans
-                        >;
-			
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-		
-                l_layer {
-
-                        bindings = <
-&trans        &kp F12         &kp  F7       &kp  F8       &kp  F9        &kp  F13                                                                       &kp F16       &kp F19                 &kp LS(LA(LG(LC(F18))))   &kp LS(LA(LG(LC(F15))))         &trans       &trans        
-&trans        &hm_l NAV_L F10 &hm LCTRL F1   &hm LALT F2   &hm LGUI F3   &kp  F14                                                                       &kp F17       &hm LGUI F20            &hm LALT LS(LA(LG(LC(F17))))  &hm LCTRL LS(LA(LG(LC(F14))))   &none        &trans        
-&trans        &kp F11         &kp  F4       &kp  F5       &kp  F6        &kp  F15      &trans                                             &trans        &kp F18       &kp LS(LA(LG(LC(F12)))) &kp LS(LA(LG(LC(F16))))   &kp LS(LA(LG(LC(F13))))   &trans       &trans        
-                                                          &trans         &trans        &hm_l SYM_L RETURN    &trans            &trans     &trans        &trans        &trans
-                        >;
-			
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-		
-                nav_layer {
-
-                        bindings = <
-&none     &none         &kp  LG(X)      &kp  LG(C)     &kp  LG(V)    &kp  LG(LS(Z))                                                                      &kp   K_APP   &leftleft    &downdown      &upupup       &rightright   &trans
-&none     &none         &hm_f LCTRL F1  &hm_f LALT F2  &hm_f LGUI F3 &kp LG(Z)                                                                           &kp F17       &kp  LEFT    &kp   DOWN     &kp   UP      &kp  RIGHT    &trans
-&none     &none         &kp  F4         &kp  LG(Q)     &kp  LG(W)    &kp  F15      &trans                                           &trans               &kp LG(A)     &pg_l     &hm C_AC_SCROLL_DOWN PG_DN &hm C_AC_SCROLL_UP PG_UP &pg_r      &trans
-                                                       &trans        &trans        &hm_l SYM_L RETURN  &trans           &mo  SYM_L  &hm LSHIFT SPACE     &kp TAB       &trans 
-                        >;
-			
-                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
-
-                sym_layer {
-
-                        bindings = <
-&trans   &kp  BSLH           &kp  AT_SIGN        &kp  LA(LS(NUMBER_8))       &kp  DOLLAR     &kp  PERCENT                                                                &trans        &trans             &trans            &trans            &trans                &trans
-&trans   &hm_l NAV_L EXCL &hm LCTRL TILDE &hm LALT PLUS &hm LGUI LT &kp  GT                                                                  &trans        &hm LGUI SLASH &hm LALT STAR  &hm LCTRL EQUAL &hm_l NUM_L UNDER  &trans
-&trans   &kp  PIPE        &kp CARET      &kp  LA(E)   &kp  GRAVE   &kp LA(LS(NUMBER_2)) &trans                                  &trans        &trans        &kp  AMPS          &kp  LBRC      &kp  RBRC      &kp  RPAR          &trans
-                                                      &trans        &trans        &trans       &trans              &trans       &trans        &trans        &trans 
-                        >;
-			
-                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
-
-                command_layer {
-
-                        bindings = <
-&trans        &trans             &kp LS(LA(F20))   &trans            &trans                &trans                                                               &trans        &trans             &trans            &trans            &trans                &trans
-&trans        &kp LS(LA(F16))    &trans            &trans            &trans                &trans                                                               &trans        &kp LS(LA(F19))    &trans            &trans            &trans                &trans
-&trans        &trans             &trans            &trans            &trans                &kp LS(LA(F18))  &trans                          &trans              &trans        &trans             &trans            &trans            &trans                &trans
-                                                   &trans            &trans                &trans       &trans                              &trans              &trans        &trans             &trans 
-                        >;
-			
-                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
-
-
-// Win ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-                wdefault_layer {
-/* HD-Vibranium
+        default_layer {
+            /* DVORAK
  * -------------------------------------------------------------------------------------------------------------------------------------
  * | `     |   '   |   ,   |   .   |   P   |   Y   |-----------------------------------|   F   |   G   |   C   |   R   |   L   | BKSPC |
  * | TAB   |   A   |   O   |   E   |   U   |   I   |-----------------------------------|   D   |   H   |   T   |   N   |   S   | ENTER |
  * | CTRL  |   ;   |   Q   |   J   |   K   |   X   |  ESC  |-------------------| CAPS  |   B   |   M   |   W   |   V   |   Z   |   /   |
- *                                 |  GUI  |  ALT  |SK SHFT|  Nav  |---|  Sym  | SPACE |  ALT  |  GUI  |
+ *                                 |  GUI  |  ALT  |SKSHIFT|  Nav  |---|  Sym  | SPACE |  ALT  |  GUI  |
  */
-                        bindings = <
-&none         &kp  W        &kp  X        &kp  M        &kp  G        &kp  J                                                                         &kp  DE_HASH  &kp  DE_DOT   &hm DE_RBKT DE_LBKT &DQT_cl DQT DE_DQT &sqt_at          &none
-&kp  TAB      &hm_l wNAV_L C &hm LGUI S    &hm LALT N    &hm LCTRL T   &kp  K                                                                         &comma_par    &hm LCTRL A   &hm LALT  E   &hm LGUI  I   &hm_l wNUM_L H    &kp  ENTER
-&none         &kp  P        &kp  F        &kp  L        &kp  D        &kp  V        &mo  ADJ_L                                         &none         &kp DE_MINUS  &kp  U        &kp  O        &kp  DE_Y     &kp  B           &none
-                                                        &del1         &bsp2         &hm_l wSYM_L R    &kp TAB               &kp ENTER   &hm LSHIFT  SPACE  &spc_sh &none
-                        >;
-			
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-		
-                wcurser_layer {
-/* QWERTY
+
+            bindings = <
+&kp GRAVE  &kp SQT   &kp COMMA  &kp DOT  &kp P     &kp Y                                               &kp F     &kp G     &kp C  &kp R  &kp L  &kp BSPC
+&kp TAB    &kp A     &kp O      &kp E    &kp U     &kp I                                               &kp D     &kp H     &kp T  &kp N  &kp S  &kp ENTER
+&kp LCTRL  &kp SEMI  &kp Q      &kp J    &kp K     &kp X     &kp ESC                       &caps_word  &kp B     &kp M     &kp W  &kp V  &kp Z  &kp SLASH
+                                         &kp LGUI  &kp LALT  &kp LSHIFT  &mo 3  &mo SYM_L  &kp SPACE   &kp RGUI  &kp LALT
+            >;
+        };
+
+        qwerty_layer {
+            /* QWERTY
  * -------------------------------------------------------------------------------------------------------------------------------------
- * | `     |   Q   |   W   |   E   |   R   |   T   |-----------------------------------|   Y   |   U   |   I   |   O   |   P   | BKSPC |
+ * | [     |   Q   |   W   |   E   |   R   |   T   |-----------------------------------|   Y   |   U   |   I   |   O   |   P   | BKSPC |
  * | TAB   |   A   |   S   |   D   |   F   |   G   |-----------------------------------|   H   |   J   |   K   |   L   |   ;   | ENTER |
  * | CTRL  |   Z   |   X   |   C   |   V   |   B   |  ESC  |-------------------|  CAPS |   N   |   M   |   ,   |   .   |   /   |   '   |
- *                                 |  GUI  |  ALT  |SK SHFT|  Nav  |---|  Sym  | SPACE |  ALT  |  GUI  |
+ *                                 |  GUI  |  ALT  |SKSHIFT|  Nav  |---|  Sym  | SPACE |  ALT  |  GUI  |
  */
-                        bindings = <
-&kp  GRAVE    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
-&kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  ENTER  
-&kp  LCTRL    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &mo  ADJ_L                                         &caps_word    &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  SQT
-                                                        &kp  LGUI     &kp  LALT     &sk  LSHIFT    &mo  wNAV_L            &trans        &kp  SPACE    &kp  LALT     &kp  RGUI
-                        >;
-			
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-		
-                wnum_layer {
-/* NUM-Layer
+
+            bindings = <
+&kp LBKT   &kp Q  &kp W  &kp E  &kp R     &kp T                                                   &kp Y     &kp U       &kp I      &kp O    &kp P      &kp BSPC
+&kp TAB    &kp A  &kp S  &kp D  &kp F     &kp G                                                   &kp H     &kp J       &kp K      &kp L    &kp SEMI   &kp ENTER
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp V     &kp B     &kp ESC                           &caps_word  &kp N     &td RBKT M  &kp COMMA  &kp DOT  &kp SLASH  &kp SQT
+                                &kp LGUI  &kp LALT  &kp LSHIFT  &mo NAV_L  &mo SYM_L  &kp SPACE   &kp RGUI  &kp LALT
+            >;
+        };
+
+        colemak_layer {
+            /* COLEMAK-DH
  * -------------------------------------------------------------------------------------------------------------------------------------
- * | `     |   Q   |   W   |   F   |   P   |   B   |-----------------------------------|   #   |   .   |  [ ]  |   "   |   '   |       |
- * |       |   !   |   -   |   =   |   <   |   >   |-----------------------------------|   ,   |   Ä   |       |   ß   |       |  Ent  |
- * | Ctrl  |   |   |   ^   |   +   |   {   |   }   |       |-------------------|       |   -   |   Ü   |   ö   |       |       |       |
- *                                 |       |       |       |        |---|      |       |       |       |
+ * | `     |   Q   |   W   |   F   |   P   |   B   |-----------------------------------|   J   |   L   |   U   |   Y   |   ;   | BKSPC |
+ * | TAB   |   A   |   R   |   S   |   T   |   G   |-----------------------------------|   M   |   N   |   E   |   I   |   O   | ENTER |
+ * | CTRL  |   Z   |   X   |   C   |   D   |   V   |  ESC  |-------------------| CAPS  |   K   |   H   |   ,   |   .   |   /   |   '   |
+ *                                 |  GUI  |  ALT  | SPACE |  Nav  |---|  Sym  |SKSHIFT|  ALT  |  GUI  |
  */
-                        bindings = <
-&trans        &kp  GRAVE    &kp  N7       &kp  N8       &kp  N9        &kp  PERCENT                                                                     &trans        &trans            &trans           &trans         &trans       &trans        
-&trans        &hm_l wNAV_L N0 &hm LGUI N1  &hm LALT N2   &hm LCTRL N3   &kp  D                                                                           &trans        &hm LCTRL DE_AE   &hm LALT DE_PLUS &hm LGUI DE_SS &none        &trans        
-&trans        &kp  Z        &kp  N4       &kp  N5       &kp  N6        &kp  DE_EURO  &trans                                             &trans          &trans        &kp  DE_UE        &kp  DE_OE       &kp  DOT       &trans       &trans        
-                                                        &trans         &trans        &hm_l wSYM_L RETURN    &trans            &trans     &trans        &hm_l F_L SPACE  &trans
-                        >;
-			
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-		
-                wl_layer {
-/* NUM-Layer
- * -------------------------------------------------------------------------------------------------------------------------------------
- * | `     |   Q   |   W   |   F   |   P   |   B   |-----------------------------------|   #   |   .   |  [ ]  |   "   |   '   |       |
- * |       |   !   |   -   |   =   |   <   |   >   |-----------------------------------|   ,   |   Ä   |       |   ß   |       |  Ent  |
- * | Ctrl  |   |   |   ^   |   +   |   {   |   }   |       |-------------------|       |   -   |   Ü   |   ö   |       |       |       |
- *                                 |       |       |       |        |---|      |       |       |       |
- */
-                        bindings = <
-&trans        &kp F12         &kp  F7       &kp  F8       &kp  F9        &kp  PERCENT                                                                   &trans        &trans            &trans           &trans         &trans       &trans        
-&trans        &hm_l wNAV_L F10 &hm LGUI F1   &hm LALT F2   &hm LCTRL F3   &kp  D                                                                         &trans        &hm LCTRL DE_AE   &hm LALT DE_PLUS &hm LGUI DE_SS &none        &trans        
-&trans        &kp F11         &kp  F4       &kp  F5       &kp  F6        &kp  DE_EURO  &trans                                             &trans        &trans        &kp  DE_UE        &kp  DE_OE       &kp  DOT       &trans       &trans        
-                                                          &trans         &trans        &hm_l wSYM_L RETURN    &trans            &trans     &trans        &trans        &trans
-                        >;
-			
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-		
-                wnav_layer {
-/* NAV   
+
+            bindings = <
+&kp GRAVE  &kp Q  &kp W  &kp F  &kp P     &kp B                                                  &kp J     &kp L     &kp U      &kp Y    &kp SEMI   &kp BSPC
+&kp TAB    &kp A  &kp R  &kp S  &kp T     &kp G                                                  &kp M     &kp N     &kp E      &kp I    &kp O      &kp ENTER
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp D     &kp V     &kp ESC                          &caps_word  &kp K     &kp H     &kp COMMA  &kp DOT  &kp SLASH  &kp SQT
+                                &kp LGUI  &kp LALT  &kp SPACE  &mo NAV_L  &mo SYM_L  &kp LSHIFT  &kp RGUI  &kp LALT
+            >;
+        };
+
+        nav_layer {
+            /* NAV   
  * -------------------------------------------------------------------------------------------------------------------------------------
  * | Copy  |   1   |   2   |   3   |   4   |   5   |-----------------------------------|   6   |   7   |   8   |   9   |   0   | BSPC  |
- * | Cut   |  GUI  |  Alt  | Ctrl  | Shift | Paste |-----------------------------------| PG UP |  Left |  Up   |  Down | Right | PG DN |
+ * | Cut   |  GUI  |  Alt  | Ctrl  | Shift | Paste |-----------------------------------| PG UP |  Left |  Down |  Up   | Right | PG DN |
  * | Ctrl  |  F1   |  F2   |  F3   |  F4   |  F5   |  UnDo |-------------------| ReDo  |  F6   |  F7   |  F8   |  F9   |  F10  | Ctrl  |
  *                                 |       |       |       |       |---| ADJ_L |       |       |       |
  */
-                        bindings = <
-&none     &none         &kp  LC(X)      &kp  LC(C)     &kp  LC(V)    &kp  LC(DE_Y)                                                                      &kp   K_APP   &leftleft    &downdown      &upupup       &rightright   &trans
-&none     &kp  LSHFT    &kp  LGUI     &kp  LALT     &kp  LCTRL    &kp LC(DE_Z)                                                                       &kp   PG_UP   &kp  LEFT    &kp   DOWN     &kp   UP      &kp  RIGHT    &trans
-&none     &none         &kp  0        &kp  0        &kp  LA(F4)        &kp  0        &trans                                           &trans     &kp   F6      &kp  HOME    &hm C_AC_SCROLL_DOWN PG_DN &hm C_AC_SCROLL_UP PG_UP &kp  END      &trans
-                                                    &trans        &trans        &hm_l wSYM_L RETURN  &trans           &mo  wSYM_L  &hm LSHIFT SPACE &kp TAB      &trans 
-                        >;
-			
-                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
 
-                wsym_layer {
-/* SYM
+            bindings = <
+&kp Copy  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5                                            &kp N6     &kp N7    &kp N8    &kp N9  &kp N0     &trans
+&kp Cut   &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &kp Paste                                         &kp PG_UP  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp PG_DN
+&trans    &kp F1    &kp F2    &kp F3     &kp F4     &kp F5     &kp Undo                     &kp Redo  &kp F6     &kp F7    &kp F8    &kp F9  &kp F10    &kp RCTRL
+                                         &trans     &trans     &trans    &trans  &mo ADJ_L  &trans    &trans     &trans
+            >;
+        };
+
+        sym_layer {
+            /* SYM
  * -------------------------------------------------------------------------------------------------------------------------------------
- * | INS   |   \   |   @   |   °   |   $   |   %   |-----------------------------------|   #   |   .   |  [ ]  |   "   |   '   |       |
- * |       |   !   |   ~   |   +   |   <   |   >   |-----------------------------------|   ,   |   /   |   *   |   =   |   _   |  Ent  |
- * | Ctrl  |   |   |   ^   |   ´   |   `   |       |       |-------------------|       |   -   |   &   |   {   |   }   |   )   |       |
- *                                 |       |       |       |        |---|      |       |       |       |
+ * | INS   |   !   |   [   |   {   |   (   |   %   |-----------------------------------|   @   |   )   |   }   |   ]   |   ^   | BSPC  |
+ * |       |   \   |   -   |   =   |   &   |   *   |-----------------------------------| HOME  | Shift | Ctrl  | Alt   | Gui   | END   |
+ * | Ctrl  |   |   |   _   |   +   |   #   |   $   |SkAltGr|-------------------| MENU  | Mute  | Vol-  | Vol+  | Play  |       | Ctrl  |
+ *                                 |       |       |       |  ADJ_L |---|      |       |       |       |
  */
-                        bindings = <
-&trans   &kp  BSLH           &kp  DE_AT        &kp  DE_DEG        &kp  DOLLAR     &kp  PERCENT                                                                &trans        &trans             &trans            &trans            &trans                &trans
-&trans   &hm_l wNAV_L DE_EXCL &hm LGUI DE_TILDE &hm LALT DE_PLUS &hm LCTRL DE_LT &kp  DE_GT                                                                  &trans        &hm LCTRL DE_SLASH &hm LALT DE_STAR  &hm LGUI DE_EQUAL &hm_l wNUM_L DE_UNDER  &trans
-&trans   &kp  DE_PIPE        &kp DE_CARET      &kp  DE_ACUT     &kp  DE_GRAVE   &kp  R         &trans                                         &trans        &trans        &kp  DE_AMPS          &kp  DE_LBRC      &kp  DE_RBRC      &kp  DE_RPAR          &trans
-                                                      &trans        &trans        &trans       &trans              &trans       &trans        &trans        &trans 
-                        >;
-			
-                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
 
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+            bindings = <
+&kp INS  &kp EXCL  &kp LBKT   &kp LBRC   &kp LPAR  &kp PERCENT                                          &kp AT      &kp RPAR      &kp RBRC      &kp RBKT  &kp CARET  &kp DEL
+&none    &kp BSLH  &kp MINUS  &kp EQUAL  &kp AMPS  &kp ASTRK                                            &kp HOME    &kp RSHFT     &kp RCTRL     &kp LALT  &kp RGUI   &kp END
+&trans   &kp PIPE  &kp UNDER  &kp PLUS   &kp HASH  &kp DOLLAR   &sk RALT                     &kp K_APP  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP  &none      &kp RCTRL
+                                         &trans    &trans       &trans    &mo ADJ_L  &trans  &trans     &trans      &trans
+            >;
+        };
 
-                capital_uml_layer {
-
-                        bindings = <
-&trans        &trans             &kp LS(LA(F20))   &trans            &trans                &trans                                                               &trans        &trans             &trans            &trans            &trans                &trans
-&trans        &kp LS(LA(F16))    &trans            &trans            &trans                &trans                                                               &trans        &a_cap_uml         &trans            &trans            &trans                &trans
-&trans        &trans             &trans            &trans            &trans                &kp LS(LA(F18))  &trans                          &trans              &trans        &u_cap_uml         &o_cap_uml        &trans            &trans                &trans
-                                                   &trans            &trans                &trans       &trans                              &trans              &trans        &trans             &trans 
-                        >;
-			
-                        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
-
-                adj_layer {
-/* ADJUST
+        adj_layer {
+            /* ADJUST
  * -------------------------------------------------------------------------------------------------------------------------------------
- * |       | QWERTY| DVORAK| COLEMK|       |       |-----------------------------------|       |  F11  |  F12  |Prt Scr|EP_OFF | EP_ON |
- * | RESET | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |-----------------------------------|       |       |Vol+   | Play  |       | RESET |
+ * |       | DVORAK| QWERTY| COLEMK|       |       |-----------------------------------|       |  F11  |  F12  |Prt Scr|EP_OFF | EP_ON |
+ * | RESET | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |-----------------------------------|       |       |       |       |       | RESET |
  * |       | LGUI  | LALT  | LCTRL | LSHIFT|       |BT CLR |-------------------|       |       |       |OUT_USB|OUT_BLE|       | BOOTL |
  *                                 |       |       |       |       |---|       |       |       |       |
  */
-                        bindings = <
-&none         &to  HDVB_L   &to wHDVB_L   &none         &kp C_PWR     &kp C_SLEEP                                                                       &none             &kp  C_BRI_DN      &kp  C_BRI_UP    &kp PRINTSCREEN   &ext_power EP_OFF  &ext_power EP_ON
-&none         &bt  BT_SEL 0 &bt  BT_SEL 1 &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                     &kp  C_MUTE       &kp  C_VOL_DN      &kp  C_VOL_UP    &kp  C_PP      &none           &kp  D
-&none         &kp  LGUI     &kp  LALT     &kp  LCTRL    &kp LSHIFT    &none         &none                                              &bt BT_CLR       &none             &none              &out  OUT_USB    &out  OUT_BLE  &none           &bootloader
-                                                        &trans        &trans        &trans        &trans                 &trans        &trans           &trans            &trans 
-                        >;
-			
-                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
+
+            bindings = <
+&none       &to 0         &to 1         &to COLEMK_L  &kp NUMBER_4  &none                                           &ch_lng_lt  &kp F11  &kp F12       &kp PRINTSCREEN  &ext_power EP_OFF  &ext_power EP_ON
+&sys_reset  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &ch_lng_lt                                      &none       &none    &none         &none            &none              &sys_reset
+&none       &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHIFT    &ch_lng_lt  &bt BT_CLR                  &none   &none       &none    &out OUT_USB  &out OUT_BLE     &none              &bootloader
+                                                      &trans        &trans      &trans      &trans  &trans  &trans  &trans      &trans
+            >;
         };
+    };
 };
