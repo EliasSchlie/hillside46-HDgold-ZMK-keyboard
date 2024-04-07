@@ -428,7 +428,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "PG_LEFT";
             #binding-cells = <0>;
-            bindings = <&kp HOME>, <&kp LS(LC(TAB))>;
+            bindings = <&kp HOME>, <&kp LC(LS(TAB))>;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
         pg_r: PG_RIGHT {
