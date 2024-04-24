@@ -12,7 +12,9 @@ It contains keymap definition files for three boards in [./config](./config):
  - Hillside 48 with 3x6+1+5 keys
  - Hillside 46 with 3x6+5 keys
 
-Pushing changes will build all the keyboards. You need to be signed in to a GitHub account to push changes and build the firmware. To not waste build time, comment out the keyboards in [./build.yaml](./build.yaml) that you do not have.
+Pushing changes will oldy build my updated keymak for the 46-key version. You need to be signed in to a GitHub account to push changes and build the firmware. To not waste build time, comment out the keyboards in [./build.yaml](./build.yaml) that you do not have.
+
+I updated the keyboard to have a lot of specialized hotkeys and have the key layout of HD-vibranium (https://sites.google.com/alanreiser.com/handsdown/home/hands-down-neu#h.eyvjpfoqjy65) which is one of the best optimized key layouts out there.
 
 To build the firmware:
 
