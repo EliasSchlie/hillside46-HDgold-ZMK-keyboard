@@ -696,11 +696,11 @@
  *                                 |  GUI  |  ALT  |SK SHFT|  Nav  |---|  Sym  | SPACE |  ALT  |  GUI  |
  */
                         bindings = <
-        &kp  GRAVE    &kp  Q         &kp  W         &kp  E         &kp  R         &kp  T                                                                  &kp  Y         &kp  U         &kp  I       &kp  O        &kp  P          &kp  BSPC
-        &kp  TAB      &kp  A         &kp  S         &kp  D         &kp  F         &kp  G                                                                  &kp  H         &kp  J         &kp  K       &kp  L        &kp  SEMI       &kp  ENTER
-        &kp  LCTRL    &kp  Z         &kp  X         &kp  C         &kp  V         &kp  B         &mo  ADJ_L                               &caps_word      &kp  N         &kp  M         &kp  COMMA    &kp  DOT        &kp  SLASH   &kp  SQT
-                                                          &kp  LGUI    &kp  LALT     &sk  LSHIFT    &mo  wNAV_L       &trans         &kp  SPACE  &kp  LALT    &kp  RGUI
-                    >;
+&kp  GRAVE    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
+&kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  ENTER  
+&kp  LCTRL    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &mo  ADJ_L                                         &caps_word    &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  SQT
+                                                        &kp  LGUI     &kp  LALT     &sk  LSHIFT    &mo  wNAV_L            &trans        &kp  SPACE    &kp  LALT     &kp  RGUI
+                        >;
 			
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
@@ -714,11 +714,11 @@
  *                                 |       |       |       |        |---|      |       |       |       |
  */
                         bindings = <
-        &trans        &kp  GRAVE     &kp  N7        &kp  N8        &kp  N9         &kp  PERCENT                                                        &trans     &trans     &trans      &trans    &trans      &trans
-        &trans        &hm_l wNAV_L N0 &hm LGUI N1  &hm LALT N2    &hm LC N3       &kp  D                                                                 &trans     &hm LC DE_AE &hm LALT DE_PLUS &hm LGUI DE_SS &none      &trans
-        &trans        &kp  Z         &kp  N4       &kp  N5        &kp  N6         &kp  DE_EURO   &trans                                 &trans           &trans    &kp  DE_UE   &kp  DE_OE     &kp  DOT   &trans      &trans
-                                                        &trans         &trans      &hm_l wSYM_L RETURN &trans      &trans     &trans    &hm_l F_L SPACE   &trans
-                    >;
+&trans        &kp  GRAVE    &kp  N7       &kp  N8       &kp  N9        &kp  PERCENT                                                                     &trans        &trans            &trans           &trans         &trans       &trans        
+&trans        &hm_l wNAV_L N0 &hm LGUI N1  &hm LALT N2   &hm LCTRL N3   &kp  D                                                                           &trans        &hm LCTRL DE_AE   &hm LALT DE_PLUS &hm LGUI DE_SS &none        &trans        
+&trans        &kp  Z        &kp  N4       &kp  N5       &kp  N6        &kp  DE_EURO  &trans                                             &trans          &trans        &kp  DE_UE        &kp  DE_OE       &kp  DOT       &trans       &trans        
+                                                        &trans         &trans        &hm_l wSYM_L RETURN    &trans            &trans     &trans        &hm_l F_L SPACE  &trans
+                        >;
 			
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
@@ -732,11 +732,11 @@
  *                                 |       |       |       |        |---|      |       |       |       |
  */
                         bindings = <
-        &trans     &kp F12         &kp  F7       &kp  F8       &kp  F9        &kp  PERCENT                                                   &trans      &trans     &trans       &trans         &trans      &trans
-        &trans     &hm_l wNAV_L F10 &hm LGUI F1   &hm LALT F2   &hm LC F3      &kp  D                                                           &trans      &hm LC DE_AE &hm LALT DE_PLUS &hm LGUI DE_SS &none       &trans
-        &trans     &kp F11         &kp  F4       &kp  F5       &kp  F6        &kp  DE_EURO   &trans                           &trans           &trans      &kp  DE_UE  &kp  DE_OE     &kp  DOT    &trans      &trans
-                                                      &trans       &trans       &hm_l wSYM_L RETURN &trans      &trans     &trans    &trans        &trans
-                    >;
+&trans        &kp F12         &kp  F7       &kp  F8       &kp  F9        &kp  PERCENT                                                                   &trans        &trans            &trans           &trans         &trans       &trans        
+&trans        &hm_l wNAV_L F10 &hm LGUI F1   &hm LALT F2   &hm LCTRL F3   &kp  D                                                                         &trans        &hm LCTRL DE_AE   &hm LALT DE_PLUS &hm LGUI DE_SS &none        &trans        
+&trans        &kp F11         &kp  F4       &kp  F5       &kp  F6        &kp  DE_EURO  &trans                                             &trans        &trans        &kp  DE_UE        &kp  DE_OE       &kp  DOT       &trans       &trans        
+                                                          &trans         &trans        &hm_l wSYM_L RETURN    &trans            &trans     &trans        &trans        &trans
+                        >;
 			
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
@@ -750,11 +750,11 @@
  *                                 |       |       |       |       |---| ADJ_L |       |       |       |
  */
                         bindings = <
-        &none     &none         &kp  LC(X)       &kp  LC(C)      &kp  LC(V)     &kp  LC(Z)                                                        &kp  K_APP      &leftleft     &downdown    &upupup       &rightright   &trans
-        &none     &none         &hm_f LGUI F1    &hm_f LALT F2   &hm_f LC F3    &kp  LC(Z)                                                        &kp  F17        &kp  LEFT      &kp  DOWN    &kp  UP       &kp  RIGHT    &trans
-        &none     &none         &kp  F4          &kp  LC(Q)      &kp  LC(W)     &kp  F15       &trans                              &trans            &kp  LC(A)     &pg_l       &hm C_AC_SCROLL_DOWN PG_DN &hm C_AC_SCROLL_UP PG_UP &pg_r        &trans
-                                                      &trans       &trans       &hm_l wSYM_L RETURN &trans    &mo wSYM_L  &hm LSHIFT SPACE  &kp  TAB    &trans
-                    >;
+&none     &none         &kp  LC(X)      &kp  LC(C)     &kp  LC(V)    &kp  LC(DE_Y)                                                                      &kp   K_APP   &leftleft    &downdown      &upupup       &rightright   &trans
+&none     &kp  LSHFT    &kp  LGUI     &kp  LALT     &kp  LCTRL    &kp LC(DE_Z)                                                                       &kp   PG_UP   &kp  LEFT    &kp   DOWN     &kp   UP      &kp  RIGHT    &trans
+&none     &none         &kp  0        &kp  0        &kp  LA(F4)        &kp  0        &trans                                           &trans     &kp   F6      &kp  HOME    &hm C_AC_SCROLL_DOWN PG_DN &hm C_AC_SCROLL_UP PG_UP &kp  END      &trans
+                                                    &trans        &trans        &hm_l wSYM_L RETURN  &trans           &mo  wSYM_L  &hm LSHIFT SPACE &kp TAB      &trans 
+                        >;
 			
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
@@ -768,11 +768,11 @@
  *                                 |       |       |       |        |---|      |       |       |       |
  */
                         bindings = <
-        &trans   &kp  BSLH           &kp  DE_AT     &kp  DE_DEG     &kp  DOLLAR   &kp  PERCENT                                                        &trans     &trans         &trans        &trans       &trans      &trans
-        &trans   &hm_l wNAV_L DE_EXCL &hm LGUI DE_TILDE &hm LALT DE_PLUS &hm LC DE_LT &kp  DE_GT                                                     &trans     &hm LC DE_SLASH &hm LALT DE_STAR &hm LGUI DE_EQUAL &hm_l wNUM_L DE_UNDER  &trans
-        &trans   &kp  DE_PIPE        &kp  DE_CARET  &kp  DE_ACUT   &kp  DE_GRAVE &kp  R        &trans                                 &trans     &trans         &kp  DE_AMPS   &kp  DE_LBRC  &kp  DE_RBRC  &kp  DE_RPAR   &trans
-                                                    &trans       &trans       &trans        &trans            &trans     &trans    &trans         &trans
-                    >;
+&trans   &kp  BSLH           &kp  DE_AT        &kp  DE_DEG        &kp  DOLLAR     &kp  PERCENT                                                                &trans        &trans             &trans            &trans            &trans                &trans
+&trans   &hm_l wNAV_L DE_EXCL &hm LGUI DE_TILDE &hm LALT DE_PLUS &hm LCTRL DE_LT &kp  DE_GT                                                                  &trans        &hm LCTRL DE_SLASH &hm LALT DE_STAR  &hm LGUI DE_EQUAL &hm_l wNUM_L DE_UNDER  &trans
+&trans   &kp  DE_PIPE        &kp DE_CARET      &kp  DE_ACUT     &kp  DE_GRAVE   &kp  R         &trans                                         &trans        &trans        &kp  DE_AMPS          &kp  DE_LBRC      &kp  DE_RBRC      &kp  DE_RPAR          &trans
+                                                      &trans        &trans        &trans       &trans              &trans       &trans        &trans        &trans 
+                        >;
 			
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
