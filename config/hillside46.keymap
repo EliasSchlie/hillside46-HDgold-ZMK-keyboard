@@ -680,7 +680,7 @@
                      */
                     bindings = <
         &none         &kp  W         &kp  X         &kp  M         &kp  G         &kp  J                                                                      &kp  DE_HASH    &kp  DE_DOT     &hm DE_RBKT DE_LBKT   &DQT_cl DQT DE_DQT    &sqt_at            &kp  DEL
-        &kp  TAB      &hm_l wNAV_L C &hm LGUI S     &hm LALT N     &hm LC T       &kp  K                                                                      &comma_par      &hm LC A       &hm LALT  E     o  &hm LGUI  I         &hm_l wNUM_L H       &kp  ENTER
+        &kp  TAB      &hm_l wNAV_L C &hm LGUI S     &hm LALT N     &hm LC T       &kp  K                                                                      &comma_par      &hm LC A       &hm LALT  E       &hm LGUI  I         &hm_l wNUM_L H       &kp  ENTER
         &none         &kp  P         &kp  F         &kp  L         &kp  D         &kp  V         &mo  ADJ_L                                  &none           &kp DE_MINUS    &kp  U           &kp  O           &kp  DE_Y         &kp  B             &none
                                                 /* Bottom row mods for Windows: 
                                                    - del1 => transforms DEL to Ctrl+DEL if SHIFT is held (see your mod-morph).
