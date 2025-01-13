@@ -25,7 +25,7 @@
 #define wCURSER_L 8
 #define wNUM_L    9
 #define wF_L      10
-#define wNAV_L    10
+#define wNAV_L    11
 #define wSYM_L    12
 
 #define UML_L    13
