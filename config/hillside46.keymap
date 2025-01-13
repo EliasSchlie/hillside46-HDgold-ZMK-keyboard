@@ -769,9 +769,9 @@
  *                                 |       |       |       |        |---|      |       |       |       |
  */
                         bindings = <
-&trans   &kp  BSLH           &kp  DE_AT        &kp  DE_DEG        &kp  DOLLAR     &kp  PERCENT                                                                &trans        &trans             &trans            &trans            &trans                &trans
-&trans   &hm_l wNAV_L DE_EXCL &hm LGUI DE_TILDE &hm LALT DE_PLUS &hm LCTRL DE_LT &kp  DE_GT                                                                  &trans        &hm LCTRL DE_SLASH &hm LALT DE_STAR  &hm LGUI DE_EQUAL &hm_l wNUM_L DE_UNDER  &trans
-&trans   &kp  DE_PIPE        &kp DE_CARET      &kp  DE_ACUT     &kp  DE_GRAVE   &kp  R         &trans                                         &trans        &trans        &kp  DE_AMPS          &kp  DE_LBRC      &kp  DE_RBRC      &kp  DE_RPAR          &trans
+&trans   &kp  BSLH           &kp  AT_SIGN        &kp  LA(LS(NUMBER_8))       &kp  DOLLAR     &kp  PERCENT                                                                &trans        &trans             &trans            &trans            &trans                &trans
+&trans   &hm_l NAV_L EXCL &hm LCTRL TILDE &hm LALT PLUS &hm LGUI LT &kp  GT                                                                  &trans        &hm LGUI SLASH &hm LALT STAR  &hm LCTRL EQUAL &hm_l NUM_L UNDER  &trans
+&trans   &kp  PIPE        &kp CARET      &kp  LA(E)   &kp  GRAVE   &kp LA(LS(NUMBER_2)) &trans                                  &trans        &trans        &kp  AMPS          &kp  LBRC      &kp  RBRC      &kp  RPAR          &trans
                                                       &trans        &trans        &trans       &trans              &trans       &trans        &trans        &trans 
                         >;
 			
