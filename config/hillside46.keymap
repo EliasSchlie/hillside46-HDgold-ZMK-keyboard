@@ -310,7 +310,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HT_BL";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <130>;
             quick_tap_ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -319,7 +319,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HT_TP";
             #binding-cells = <2>;
-            tapping-term-ms = <120>;
+            tapping-term-ms = <100>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -328,7 +328,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -337,7 +337,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_FAST";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick_tap_ms = <0>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
@@ -347,7 +347,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_L";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
@@ -356,7 +356,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "GUI_LAYER";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&comm_l>, <&kp>;
@@ -366,7 +366,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "space_shift_layer";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&caps_word>, <&spc_sh>;
@@ -376,7 +376,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "lk_qu";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp_qu>;
         };
@@ -386,7 +386,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "SQT_clr";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&SQT_close>, <&kp>;
         };
@@ -394,7 +394,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "PAR_clr";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&PAR_close>, <&kp>;
         };
@@ -402,7 +402,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "DQT_clr";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&DQT_close>, <&kp>;
         };
@@ -410,7 +410,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "A_UM";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&a_uml>;
         };
@@ -418,7 +418,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "O_UM";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&o_uml>;
         };
@@ -426,7 +426,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "U_UM";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&u_uml>;
         };
