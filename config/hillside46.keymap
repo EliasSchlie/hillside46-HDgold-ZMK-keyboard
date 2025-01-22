@@ -648,7 +648,7 @@
 &trans   &kp  BSLH        &kp  AT_SIGN    &kp  LA(LS(NUMBER_8)) &kp LA(LS(NUMBER_2))   &kp  N                                                                &trans        &trans             &trans            &trans            &trans                &trans
 &trans   &hm_l NAV_L N &hm LCTRL N &hm LALT N         &hm LGUI N  &kp  N                                                                     &comma_par    &a_um  LGUI A    &hm LALT PERCENT  &hm LCTRL LA(S) &hm_l NUM_L N  &trans
 &trans   &kp  PIPE        &kp N       &kp  LA(E)            &kp  GRAVE   &kp N   &trans                                  &trans        &trans          &u_um  LGUI U        &o_um  LGUI O       &trans     &kp  N          &trans
-                                                      &trans        &trans        &trans       &trans              &trans       &trans        &trans        &trans 
+                                                      &trans        &trans        &trans       &trans              &trans       &hm_l  UML_L SPACE   &trans        &trans 
                         >;
 			
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
