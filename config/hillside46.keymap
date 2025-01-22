@@ -609,9 +609,9 @@
                 num_layer {
 
                         bindings = <
-&trans        &kp  BSLH      &kp  N7       &kp  N8       &kp  N9        &kp  PERCENT                                                                     &trans        &trans       &trans           &trans         &trans       &trans        
-&trans        &hm_l NAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3   &kp  GT                                                                          &trans        &a_um  LGUI A    &hm LALT PLUS     &hm LCTRL LA(S) &none        &trans        
-&trans        &kp  PIPE      &kp  N4       &kp  N5       &kp  N6        &kp  LA(LS(NUMBER_2))  &trans                                             &trans          &trans        &u_um  LGUI U        &o_um  LGUI O       &trans       &trans       &trans        
+&trans        &kp  CARET     &kp  N7       &kp  N8       &kp  N9        &kp  GT                                                                         &trans        &trans           &trans         &trans         &trans       &trans        
+&trans        &hm_l NAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3    &kp  LT                                                                         &comma_par    &hm LGUI RPAR    &hm LALT STAR  &hm LCTRL PLUS &none        &trans        
+&trans        &kp  TILDE     &kp  N4       &kp  N5       &kp  N6        &kp  DOLLAR  &trans                                             &trans          &trans        &kp  AMPS        &kp  LBRC      &kp  RBRC      &trans       &trans        
                                                         &trans         &trans        &hm_l SYM_L RETURN    &trans            &trans     &hm_l  UML_L SPACE     &hm_l F_L SPACE  &trans
                         >;
 			
@@ -645,9 +645,9 @@
                 sym_layer {
 
                         bindings = <
-&trans   &kp  BSLH        &kp  AT_SIGN    &kp  LA(LS(NUMBER_8)) &kp DOLLAR   &kp  PERCENT                                                                &trans        &trans             &trans            &trans            &trans                &trans
-&trans   &hm_l NAV_L EXCL &hm LCTRL TILDE &hm LALT PLUS         &hm LGUI LT  &kp  GT                                                                     &trans        &hm LGUI SLASH    &hm LALT STAR  &hm LCTRL EQUAL &hm_l NUM_L UNDER  &trans
-&trans   &kp  PIPE        &kp CARET       &kp  LA(E)            &kp  GRAVE   &kp LA(LS(NUMBER_2)) &trans                                  &trans        &trans        &kp  AMPS          &kp  LBRC      &kp  RBRC      &kp  RPAR          &trans
+&trans   &kp  BSLH        &kp  AT_SIGN    &kp  LA(LS(NUMBER_8)) &kp LA(LS(NUMBER_2))   &kp  N                                                                &trans        &trans             &trans            &trans            &trans                &trans
+&trans   &hm_l NAV_L N &hm LCTRL N &hm LALT N         &hm LGUI N  &kp  N                                                                     &comma_par    &a_um  LGUI A    &hm LALT PERCENT  &hm LCTRL LA(S) &hm_l NUM_L N  &trans
+&trans   &kp  PIPE        &kp N       &kp  LA(E)            &kp  GRAVE   &kp N   &trans                                  &trans        &trans          &u_um  LGUI U        &o_um  LGUI O       &trans     &kp  N          &trans
                                                       &trans        &trans        &trans       &trans              &trans       &trans        &trans        &trans 
                         >;
 			
