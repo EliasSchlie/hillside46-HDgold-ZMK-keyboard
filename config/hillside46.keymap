@@ -612,7 +612,7 @@
 &trans        &kp  CARET     &kp  N7       &kp  N8       &kp  N9        &kp  GT                                                                         &trans        &trans           &trans         &trans         &trans       &trans        
 &trans        &hm_l NAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3    &kp  LT                                                                         &comma_par    &hm LGUI RPAR    &hm LALT STAR  &hm LCTRL PLUS &none        &trans        
 &trans        &kp  TILDE     &kp  N4       &kp  N5       &kp  N6        &kp  DOLLAR  &trans                                             &trans          &trans        &kp  AMPS        &kp  LBRC      &kp  RBRC      &trans       &trans        
-                                                        &trans         &trans        &hm_l SYM_L RETURN    &trans            &trans     &hm_l  UML_L SPACE     &hm_l F_L SPACE  &trans
+                                                        &trans         &trans        &hm_l SYM_L RETURN    &trans            &trans     &h_b LSHIFT  SPACE     &hm_l F_L SPACE  &trans
                         >;
 			
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
