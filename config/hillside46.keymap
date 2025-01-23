@@ -282,6 +282,18 @@
                 <&macro_release>,
                 <&kp LCTRL &kp LSHFT>;
         };
+        shift_trans: shift_trans {
+            compatible = "zmk,behavior-macro";
+            label = "SHIFT_TRANS";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&trans>,
+                <&macro_release>,
+                <&kp LSHFT>;
+        };
         // Other ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
          schnell_sch: schnell {
              label = "Schau_mal";
@@ -618,7 +630,7 @@
 
                         bindings = <
 &trans        &kp  CARET     &kp  N7       &kp  N8       &kp  N9        &kp  GT                                                                         &trans        &trans           &trans         &trans         &trans       &trans        
-&trans        &hm_l NAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3    &kp  LT                                                                         &trans        &hm LGUI RPAR    &hm LALT STAR  &hm LCTRL N    &none        &trans        
+&shift_trans  &hm_l NAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3    &kp  LT                                                                         &trans        &hm LGUI RPAR    &hm LALT STAR  &hm LCTRL N    &none        &trans        
 &trans        &kp  TILDE     &kp  N4       &kp  N5       &kp  N6        &kp  DOLLAR  &trans                                             &trans          &trans        &kp  AMPS        &kp  LBRC      &kp  RBRC      &trans       &trans        
                                                         &trans         &trans        &hm_l SYM_L RETURN    &trans            &trans     &hm_l F_L SPACE     &hm_l F_L SPACE  &trans
                         >;
