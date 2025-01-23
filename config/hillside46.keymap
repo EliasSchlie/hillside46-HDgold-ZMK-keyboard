@@ -454,6 +454,13 @@
             bindings = <&kp SLASH>, <&kp BSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        hash_at: hash_at {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HASH_AT";
+            #binding-cells = <0>;
+            bindings = <&kp HASH>, <&kp AT_SIGN>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         comma_par: comma_par {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_par";
@@ -605,9 +612,9 @@
                 default_layer {
 
                         bindings = <
-&slash_bslash &kp  W        &kp  X        &kp  M        &kp  G        &kp  J                                                                         &kp  HASH  &kp  DOT   &hm RBKT LBKT &DQT_cl DQT DQT &sqt_at          &kp DEL
+&slash_bslash &kp  W        &kp  X        &kp  M        &kp  G        &kp  J                                                                         &hash_at      &kp  DOT   &hm RBKT LBKT &DQT_cl DQT DQT &sqt_at          &kp DEL
 &kp  TAB      &hm_l NAV_L C &hm LCTRL S   &hm LALT N    &gui_l A T    &kp  K                                                                         &comma_par    &gui_l A A    &hm LALT  E   &hm LCTRL  I   &hm_l NUM_L H    &kp  ENTER
-&kp EQUAL     &kp  P        &kp  F        &kp  L        &kp  D        &kp  V        &mo  ADJ_L                                         &none         &kp MINUS  &kp  U        &kp  O        &kp  Y     &kp  B           &none
+&kp EQUAL     &kp  P        &kp  F        &kp  L        &kp  D        &kp  V        &mo  ADJ_L                                         &none         &kp MINUS     &kp  U        &kp  O        &kp  Y     &kp  B           &none
                                                         &kp DEL         &kp BSPC         &hm_l SYM_L R    &h_h LG(LC(LALT)) LS(LA(LG(LC(F19))))               &h_h LG(LC(LS(LALT))) LS(LA(LG(LC(F20))))  &h_b LSHIFT  SPACE  &spc_sh &kp C_PLAY_PAUSE
                         >;
 			
@@ -630,7 +637,7 @@
 
                         bindings = <
 &trans        &kp  CARET     &kp  N7       &kp  N8       &kp  N9        &kp  GT                                                                         &trans        &trans           &trans         &trans         &trans       &trans        
-&shift_trans  &hm_l NAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3    &kp  LT                                                                         &trans        &hm LGUI RPAR    &hm LALT STAR  &hm LCTRL N    &none        &trans        
+&trans        &hm_l NAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3    &kp  LT                                                                         &trans        &hm LGUI RPAR    &hm LALT STAR  &hm LCTRL N    &none        &trans        
 &trans        &kp  TILDE     &kp  N4       &kp  N5       &kp  N6        &kp  DOLLAR  &trans                                             &trans          &trans        &kp  AMPS        &kp  LBRC      &kp  RBRC      &trans       &trans        
                                                         &trans         &trans        &hm_l SYM_L RETURN    &trans            &trans     &hm_l F_L SPACE     &hm_l F_L SPACE  &trans
                         >;
@@ -641,9 +648,9 @@
                 l_layer {
 
                         bindings = <
-&trans  &kp F12         &kp  F7       &kp  F8       &kp  F9       &kp  F13                                                                       &kp F16       &kp F19                 &kp LS(LA(LG(LC(F18))))   &kp LS(LA(LG(LC(F15))))        &trans       &trans        
-&trans  &hm_l NAV_L F10 &hm LCTRL F1   &hm LALT F2  &hm LGUI F3   &kp  F14                                                                       &trans  &hm LGUI F20            &hm LALT LS(LA(LG(LC(F17))))  &hm LCTRL LS(LA(LG(LC(F14))))   &none        &trans        
-&trans  &kp F11         &kp  F4       &kp  F5       &kp  F6       &kp  F15      &trans                                             &trans        &trans  &kp LS(LA(LG(LC(F12)))) &kp LS(LA(LG(LC(F16))))   &kp LS(LA(LG(LC(F13))))   &trans       &trans        
+&shift_trans  &kp F12         &kp  F7       &kp  F8       &kp  F9       &kp  F13                                                                       &kp F16       &kp F19                 &kp LS(LA(LG(LC(F18))))   &kp LS(LA(LG(LC(F15))))        &trans       &trans        
+&shift_trans  &hm_l NAV_L F10 &hm LCTRL F1   &hm LALT F2  &hm LGUI F3   &kp  F14                                                                       &shift_trans  &hm LGUI F20            &hm LALT LS(LA(LG(LC(F17))))  &hm LCTRL LS(LA(LG(LC(F14))))   &none        &trans        
+&shift_trans  &kp F11         &kp  F4       &kp  F5       &kp  F6       &kp  F15      &trans                                             &trans        &shift_trans  &kp LS(LA(LG(LC(F12)))) &kp LS(LA(LG(LC(F16))))   &kp LS(LA(LG(LC(F13))))   &trans       &trans        
                                                           &trans         &trans        &hm_l SYM_L RETURN    &trans            &trans     &trans        &trans        &trans
                         >;
 			
@@ -665,9 +672,9 @@
                 sym_layer {
 
                         bindings = <
-&trans   &kp  BSLH        &kp  AT_SIGN    &kp  LA(LS(NUMBER_8)) &kp LA(LS(NUMBER_2))   &kp  N                                                                &trans        &trans             &trans            &trans            &trans                &trans
+&trans   &kp  N        &kp  N    &kp  LA(LS(NUMBER_8)) &kp LA(LS(NUMBER_2))   &kp  N                                                                &trans        &trans             &trans            &trans            &trans                &trans
 &trans   &hm_l NAV_L N &hm LCTRL N &hm LALT N         &hm LGUI N  &kp  N                                                                     &comma_par    &a_um  LGUI A    &hm LALT PERCENT  &hm LCTRL LA(S) &hm_l NUM_L N  &trans
-&trans   &kp  PIPE        &kp N       &kp  LA(E)            &kp  GRAVE   &kp N   &trans                                  &trans        &trans          &u_um  LGUI U        &o_um  LGUI O       &trans     &kp  N          &trans
+&trans   &kp  N        &kp N       &kp  LA(E)            &kp  GRAVE   &kp N   &trans                                  &trans        &trans          &u_um  LGUI U        &o_um  LGUI O       &trans     &kp  N          &trans
                                                       &trans        &trans        &trans       &trans              &trans       &hm_l  UML_L SPACE   &trans        &trans 
                         >;
 			
