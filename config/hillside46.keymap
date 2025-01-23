@@ -297,10 +297,7 @@
     behaviors {
 
      // Home row mods ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-        shift_trans = &macro_press_release (0) {
-            bindings = <&kp LSFT &trans>;
-        };
-        
+      
         h_h: hold_tap_hold_prefered {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_HP";
@@ -608,9 +605,9 @@
                 curser_layer {
 
                         bindings = <
-&kp  GRAVE    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
-&kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  ENTER  
-&none         &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &mo  ADJ_L                                         &caps_word    &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  SQT
+&kp  GRAVE    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp F16       &kp F19                 &kp LS(LA(LG(LC(F18))))   &kp LS(LA(LG(LC(F15))))         &trans       &trans        
+&kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &trans  &hm LGUI F20            &hm LALT LS(LA(LG(LC(F17))))  &hm LCTRL LS(LA(LG(LC(F14))))   &none        &trans        
+&none         &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &mo  ADJ_L                                         &caps_word    &trans  &kp LS(LA(LG(LC(F12)))) &kp LS(LA(LG(LC(F16))))   &kp LS(LA(LG(LC(F13))))   &trans       &trans        
                                                         &none         &kp  LALT     &sk  LSHIFT    &mo  NAV_L            &trans        &kp  SPACE    &kp  LALT     &none
                         >;
 			
@@ -621,7 +618,7 @@
 
                         bindings = <
 &trans        &kp  CARET     &kp  N7       &kp  N8       &kp  N9        &kp  GT                                                                         &trans        &trans           &trans         &trans         &trans       &trans        
-&trans        &hm_l NAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3    &kp  LT                                                                         &trans        &hm LGUI RPAR    &hm LALT STAR  &hm LCTRL PLUS &none        &trans        
+&trans        &hm_l NAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3    &kp  LT                                                                         &trans        &hm LGUI RPAR    &hm LALT STAR  &hm LCTRL N    &none        &trans        
 &trans        &kp  TILDE     &kp  N4       &kp  N5       &kp  N6        &kp  DOLLAR  &trans                                             &trans          &trans        &kp  AMPS        &kp  LBRC      &kp  RBRC      &trans       &trans        
                                                         &trans         &trans        &hm_l SYM_L RETURN    &trans            &trans     &hm_l F_L SPACE     &hm_l F_L SPACE  &trans
                         >;
@@ -632,9 +629,9 @@
                 l_layer {
 
                         bindings = <
-&slash_bslash &kp F12         &kp  F7       &kp  F8       &kp  F9        &kp  F13                                                                       &kp F16       &kp F19                 &kp LS(LA(LG(LC(F18))))   &kp LS(LA(LG(LC(F15))))         &trans       &trans        
-&shift_trans  &hm_l NAV_L F10 &hm LCTRL F1   &hm LALT F2   &hm LGUI F3   &kp  F14                                                                       &kp F17       &hm LGUI F20            &hm LALT LS(LA(LG(LC(F17))))  &hm LCTRL LS(LA(LG(LC(F14))))   &none        &trans        
-&trans        &kp F11         &kp  F4       &kp  F5       &kp  F6        &kp  F15      &trans                                             &trans        &kp F18       &kp LS(LA(LG(LC(F12)))) &kp LS(LA(LG(LC(F16))))   &kp LS(LA(LG(LC(F13))))   &trans       &trans        
+&trans  &kp F12         &kp  F7       &kp  F8       &kp  F9       &kp  F13                                                                       &kp F16       &kp F19                 &kp LS(LA(LG(LC(F18))))   &kp LS(LA(LG(LC(F15))))        &trans       &trans        
+&trans  &hm_l NAV_L F10 &hm LCTRL F1   &hm LALT F2  &hm LGUI F3   &kp  F14                                                                       &trans  &hm LGUI F20            &hm LALT LS(LA(LG(LC(F17))))  &hm LCTRL LS(LA(LG(LC(F14))))   &none        &trans        
+&trans  &kp F11         &kp  F4       &kp  F5       &kp  F6       &kp  F15      &trans                                             &trans        &trans  &kp LS(LA(LG(LC(F12)))) &kp LS(LA(LG(LC(F16))))   &kp LS(LA(LG(LC(F13))))   &trans       &trans        
                                                           &trans         &trans        &hm_l SYM_L RETURN    &trans            &trans     &trans        &trans        &trans
                         >;
 			
