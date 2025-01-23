@@ -450,7 +450,7 @@
         kp_s: kp_s {
             compatible = "zmk,behavior-mod-morph";
             label = "KP_SHIFT";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
