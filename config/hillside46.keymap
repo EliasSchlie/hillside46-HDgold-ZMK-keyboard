@@ -465,7 +465,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "HASH_AT";
             #binding-cells = <0>;
-            bindings = <&kp HASH>, <&kp AT_SIGN>;
+            bindings = <&kp HASH>, <&kp PERCENT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         comma_par: comma_par {
@@ -655,9 +655,9 @@
                 l_layer {
 
                         bindings = <
-&shift_trans  &kp F12         &kp  F7       &kp  F8       &kp  F9       &kp  F13                                                                       &kp F16       &kp F19                 &kp LS(LA(LG(LC(F18))))   &kp LS(LA(LG(LC(F15))))        &trans       &trans        
-&shift_trans  &hm_l NAV_L F10 &hm LCTRL F1   &hm LALT F2  &hm LGUI F3   &kp  F14                                                                       &shift_trans  &hm LGUI F20            &hm LALT LS(LA(LG(LC(F17))))  &hm LCTRL LS(LA(LG(LC(F14))))   &none        &trans        
-&shift_trans  &kp F11         &kp  F4       &kp  F5       &kp  F6       &kp  F15      &trans                                             &trans        &shift_trans  &kp LS(LA(LG(LC(F12)))) &kp LS(LA(LG(LC(F16))))   &kp LS(LA(LG(LC(F13))))   &trans       &trans        
+&kp BSLH  &kp F12         &kp  F7       &kp  F8       &kp  F9       &kp  F13                                                                       &kp F16       &kp F19                 &kp LS(LA(LG(LC(F18))))   &kp LS(LA(LG(LC(F15))))        &trans       &trans        
+&shift_trans  &hm_l NAV_L F10 &hm LCTRL F1   &hm LALT F2  &hm LGUI F3   &kp  F14                                                                       &kp LPAR      &hm LGUI F20            &hm LALT LS(LA(LG(LC(F17))))  &hm LCTRL LS(LA(LG(LC(F14))))   &none        &trans        
+&shift_trans  &kp F11         &kp  F4       &kp  F5       &kp  F6       &kp  F15      &trans                                             &trans        &kp UNDER     &kp LS(LA(LG(LC(F12)))) &kp LS(LA(LG(LC(F16))))   &kp LS(LA(LG(LC(F13))))   &trans       &trans        
                                                           &trans         &trans        &hm_l SYM_L RETURN    &trans            &trans     &trans        &trans        &trans
                         >;
 			
