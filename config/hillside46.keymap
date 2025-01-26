@@ -479,14 +479,14 @@
             compatible = "zmk,behavior-mod-morph";
             label = "BKT_TILDE";
             #binding-cells = <0>;
-            bindings = <&hm RBKT LBKT>, <kp TILDE>;
+            bindings = <&kp RBKT>, <kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         dqt_degree: dqt_degree {
             compatible = "zmk,behavior-mod-morph";
             label = "DQT_DEGREE";
             #binding-cells = <0>;
-            bindings = <&DQT_cl DQT DQT>, <kp LA(LS(NUMBER_8))>;
+            bindings = <&kp DQT>, <kp LA(LS(NUMBER_8))>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };   
         sqt_at: SQTDQT {
