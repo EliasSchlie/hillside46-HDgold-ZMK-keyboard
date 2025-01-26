@@ -488,6 +488,13 @@
             #binding-cells = <0>;
             bindings = <&kp DQT>, <&kp LA(LS(NUMBER_8))>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        upup_fold: upup_fold {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DQT_DEGREE";
+            #binding-cells = <0>;
+            bindings = <&upupup >, <&kp LA(LG(LBKT))>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };   
         sqt_at: SQTDQT {
             compatible = "zmk,behavior-mod-morph";
