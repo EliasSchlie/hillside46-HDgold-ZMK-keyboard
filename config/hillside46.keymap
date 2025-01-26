@@ -486,7 +486,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "DQT_DEGREE";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp LA(LS(NUMBER_8))>;
+            bindings = <&kp DQT>, <&kp LA(LS(NUMBER_8))>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };   
         sqt_at: SQTDQT {
