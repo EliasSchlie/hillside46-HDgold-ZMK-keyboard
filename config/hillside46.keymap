@@ -579,10 +579,19 @@
         };
      // TAP Dance ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
         sh_sp: sh_sp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SH_SP";
+            #binding-cells = <2>;
+            tapping-term-ms = <130>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&sp_double>, <&kp>;
+        };
+        sp_double: sp_double {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <400>;
-            bindings = <&h_b LSHIFT  SPACE>, <&kp N>, <&kp N3>;
+            bindings = <&kp SPACE>, <&kp N>, <&kp N3>;
         };
     };
 
