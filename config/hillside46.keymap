@@ -582,7 +582,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&kp SPACE>, <&kp LEFT_SHIFT>, <&kp N3>;
+            bindings = <&h_b LSHIFT  SPACE>, <&kp N>, <&kp N3>;
         };
     };
 
