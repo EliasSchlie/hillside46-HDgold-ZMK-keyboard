@@ -581,7 +581,7 @@
         sh_sp: sh_sp {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <400>;
             bindings = <&h_b LSHIFT  SPACE>, <&kp N>, <&kp N3>;
         };
     };
