@@ -479,7 +479,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "BKT_TILDE";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&PAR_cl LPAR LPAR>;
+            bindings = <&kp COMMA>, <&kp TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         dqt_degree: dqt_degree {
