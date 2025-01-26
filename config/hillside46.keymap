@@ -498,7 +498,7 @@
         };   
         upup_fold: upup_fold {
             compatible = "zmk,behavior-mod-morph";
-            label = "DQT_DEGREE";
+            label = "DOWNDOWN_FOLD";
             #binding-cells = <0>;
             bindings = <&upupup >, <&kp LA(LG(LBKT))>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
@@ -577,6 +577,12 @@
             release-after-ms = <1000>;
             quick-release;
         };
+     // TAP Dance ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        sh_sp: sh_sp {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_SPACE";
+            bindings = <&kp SPACE>, <&kp LSHFT>;
+        };
     };
 
 
@@ -650,7 +656,7 @@
 &slash_bslash &kp  W        &kp  X        &kp  M        &kp  G        &kp  J                                                                         &hash_per      &dot_grv     &bkt_tilde     &dqt_degree    &sqt_at          &kp DEL
 &kp  TAB      &hm_l NAV_L C &hm LCTRL S   &hm LALT N    &gui_l A T    &kp  K                                                                         &comma_par    &gui_l A A    &hm LALT  E   &hm LCTRL  I   &hm_l NUM_L H    &kp  ENTER
 &kp EQUAL     &kp  P        &kp  F        &kp  L        &kp  D        &kp  V        &mo  ADJ_L                                         &none         &kp MINUS     &kp  U        &kp  O        &kp  Y         &kp  B           &none
-                                                        &kp DEL         &kp BSPC         &hm_l SYM_L R    &h_h LG(LC(LALT)) LS(LA(LG(LC(F19))))               &h_h LG(LC(LS(LALT))) LS(LA(LG(LC(F20))))  &h_b LSHIFT  SPACE  &spc_sh &kp C_PLAY_PAUSE
+                                      &kp DEL       &kp BSPC      &hm_l SYM_L R    &h_h LG(LC(LALT)) LS(LA(LG(LC(F19))))   &h_h LG(LC(LS(LALT))) LS(LA(LG(LC(F20))))  &sh_sp  &spc_sh &kp C_PLAY_PAUSE
                         >;
 			
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
