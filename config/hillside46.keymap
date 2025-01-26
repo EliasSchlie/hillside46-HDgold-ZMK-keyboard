@@ -581,7 +581,7 @@
         sh_sp: sh_sp {
             compatible = "zmk,behavior-hold-tap";
             label = "SH_SP";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <130>;
             quick_tap_ms = <0>;
             flavor = "balanced";
