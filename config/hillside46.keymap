@@ -475,6 +475,20 @@
             bindings = <&kp COMMA>, <&PAR_cl LPAR LPAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        bkt_tilde: bkt_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BKT_TILDE";
+            #binding-cells = <0>;
+            bindings = <&hm RBKT LBKT>, <kp TILDE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        dqt_degree: dqt_degree {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DQT_DEGREE";
+            #binding-cells = <0>;
+            bindings = <&DQT_cl DQT DQT>, <kp LA(LS(NUMBER_8))>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };   
         sqt_at: SQTDQT {
             compatible = "zmk,behavior-mod-morph";
             label = "SQTDQT";
@@ -619,9 +633,9 @@
                 default_layer {
 
                         bindings = <
-&slash_bslash &kp  W        &kp  X        &kp  M        &kp  G        &kp  J                                                                         &hash_per      &dot_grv     &hm RBKT LBKT &DQT_cl DQT DQT &sqt_at          &kp DEL
+&slash_bslash &kp  W        &kp  X        &kp  M        &kp  G        &kp  J                                                                         &hash_per      &dot_grv     &bkt_tilde     &dqt_degree    &sqt_at          &kp DEL
 &kp  TAB      &hm_l NAV_L C &hm LCTRL S   &hm LALT N    &gui_l A T    &kp  K                                                                         &comma_par    &gui_l A A    &hm LALT  E   &hm LCTRL  I   &hm_l NUM_L H    &kp  ENTER
-&kp EQUAL     &kp  P        &kp  F        &kp  L        &kp  D        &kp  V        &mo  ADJ_L                                         &none         &kp MINUS     &kp  U        &kp  O        &kp  Y     &kp  B           &none
+&kp EQUAL     &kp  P        &kp  F        &kp  L        &kp  D        &kp  V        &mo  ADJ_L                                         &none         &kp MINUS     &kp  U        &kp  O        &kp  Y         &kp  B           &none
                                                         &kp DEL         &kp BSPC         &hm_l SYM_L R    &h_h LG(LC(LALT)) LS(LA(LG(LC(F19))))               &h_h LG(LC(LS(LALT))) LS(LA(LG(LC(F20))))  &h_b LSHIFT  SPACE  &spc_sh &kp C_PLAY_PAUSE
                         >;
 			
