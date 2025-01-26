@@ -580,8 +580,9 @@
      // TAP Dance ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
         sh_sp: sh_sp {
             compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT_SPACE";
-            bindings = <&kp SPACE>, <&kp LSHFT>;
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp SPACE>, <&kp LEFT_SHIFT>, <&kp N3>;
         };
     };
 
