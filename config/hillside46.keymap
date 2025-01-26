@@ -643,9 +643,9 @@
                 num_layer {
 
                         bindings = <
-&trans        &kp  CARET     &kp  N7       &kp  N8       &kp  N9        &kp  GT                                                                         &trans        &trans           &trans         &trans         &trans       &trans        
-&trans        &hm_l NAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3    &kp  LT                                                                         &trans        &hm LGUI RPAR    &hm LALT STAR  &hm LCTRL N    &none        &trans        
-&trans        &kp  TILDE     &kp  N4       &kp  N5       &kp  N6        &kp  DOLLAR  &trans                                             &trans          &trans        &kp  AMPS        &kp  LBRC      &kp  RBRC      &trans       &trans        
+&trans        &kp  CARET     &kp  N7       &kp  N8       &kp  N9        &kp  GT                                                                         &trans        &kp DOT           &trans         &trans         &trans       &trans        
+&trans        &hm_l NAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3    &kp  LT                                                                         &trans        &hm LGUI RPAR    &hm LALT STAR  &hm LCTRL LA(LS(NUMBER_2))    &none        &trans        
+&trans        &kp  PIPE     &kp  N4       &kp  N5       &kp  N6        &kp  DOLLAR  &trans                                             &trans          &trans        &kp  AMPS        &kp  LBRC      &kp  RBRC      &trans       &trans        
                                                         &trans         &trans        &hm_l SYM_L RETURN    &trans            &trans     &hm_l F_L SPACE     &hm_l F_L SPACE  &trans
                         >;
 			
@@ -655,7 +655,7 @@
                 l_layer {
 
                         bindings = <
-&kp BACKSLASH &kp F12        &kp  F7       &kp  F8       &kp  F9       &kp  F13                                                                       &kp PERCENT   &kp GRAVE               &kp LS(LA(LG(LC(F18))))   &kp LS(LA(LG(LC(F15))))        &trans       &trans        
+&kp BACKSLASH &kp F12        &kp  F7       &kp  F8       &kp  F9       &kp  F13                                                                       &kp PERCENT   &kp GRAVE               &kp TILDE                   &kp LA(LS(NUMBER_8))        &trans       &trans        
 &kp LS(TAB)  &hm_l NAV_L F10 &hm LCTRL F1   &hm LALT F2  &hm LGUI F3   &kp  F14                                                                       &kp LPAR      &hm LGUI F20            &hm LALT LS(LA(LG(LC(F17))))  &hm LCTRL LS(LA(LG(LC(F14))))   &none        &trans        
 &kp PLUS     &kp F11         &kp  F4       &kp  F5       &kp  F6       &kp  F15      &trans                                             &trans        &kp UNDER     &kp LS(LA(LG(LC(F12)))) &kp LS(LA(LG(LC(F16))))   &kp LS(LA(LG(LC(F13))))   &trans       &trans        
                                                           &trans         &trans        &hm_l SYM_L RETURN    &trans            &trans     &trans        &trans        &trans
@@ -679,9 +679,9 @@
                 sym_layer {
 
                         bindings = <
-&trans   &kp  N        &kp  N    &kp  LA(LS(NUMBER_8)) &kp LA(LS(NUMBER_2))   &kp  N                                                                &trans        &trans             &trans            &trans            &trans                &trans
-&trans   &hm_l NAV_L N &hm LCTRL N &hm LALT N         &hm LGUI N  &kp  N                                                                     &comma_par    &a_um  LGUI A    &hm LALT PERCENT  &hm LCTRL LA(S) &hm_l NUM_L N  &trans
-&trans   &kp  PIPE     &kp N       &kp  LA(E)            &kp  N   &kp N   &trans                                  &trans        &trans          &u_um  LGUI U        &o_um  LGUI O       &trans     &kp  N          &trans
+&trans   &kp  N        &kp  N    &kp  N    &kp N   &kp  N                                                                &trans        &trans             &trans            &trans            &kp  LS(LA(LG(LC(F15))))          &trans
+&trans   &hm_l NAV_L N &hm LCTRL N &hm LALT N         &hm LGUI N  &kp  N                                                                     &comma_par    &a_um  LGUI A    &hm LALT LA(E)  &hm LCTRL LA(S) &hm_l NUM_L N  &trans
+&trans   &kp  N     &kp N       &kp  N            &kp  N   &kp N   &trans                                  &trans        &trans          &u_um  LGUI U        &o_um  LGUI O       &trans     &kp  N          &trans
                                                       &trans        &trans        &trans       &trans              &trans       &hm_l  UML_L SPACE   &trans        &trans 
                         >;
 			
