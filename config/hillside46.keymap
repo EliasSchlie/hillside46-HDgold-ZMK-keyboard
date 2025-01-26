@@ -489,6 +489,13 @@
             bindings = <&kp DQT>, <&kp LA(LS(NUMBER_8))>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        dowdow_fold: dowdow_fold {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOWDOW_FOLD";
+            #binding-cells = <0>;
+            bindings = <&downdown >, <&kp LA(LG(RBKT))>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };   
         upup_fold: upup_fold {
             compatible = "zmk,behavior-mod-morph";
             label = "DQT_DEGREE";
@@ -688,7 +695,7 @@
                 nav_layer {
 
                         bindings = <
-&none     &none         &kp  LG(X)      &kp  LG(C)     &kp  LG(V)    &kp  LG(LS(Z))                                                                      &kp   K_APP   &leftleft    &downdown      &upupup       &rightright   &trans
+&none     &none         &kp  LG(X)      &kp  LG(C)     &kp  LG(V)    &kp  LG(LS(Z))                                                                      &kp   K_APP   &leftleft    &dowdow_fold   &upup_fold    &rightright   &trans
 &none     &none         &hm_f LCTRL F1  &hm_f LALT F2  &hm_f LGUI F3 &kp LG(Z)                                                                           &kp F17       &kp  LEFT    &kp   DOWN     &kp   UP      &kp  RIGHT    &trans
 &none     &none         &kp  F4         &kp  LG(Q)     &kp  LG(W)    &kp  F15      &trans                                           &trans               &kp LG(A)     &pg_l     &hm C_AC_SCROLL_DOWN PG_DN &hm C_AC_SCROLL_UP PG_UP &pg_r      &trans
                                                        &trans        &trans        &hm_l SYM_L RETURN  &trans           &mo  SYM_L  &hm LSHIFT SPACE     &kp TAB       &trans 
