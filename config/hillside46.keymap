@@ -57,6 +57,13 @@
         	bindings = <&macro_tap &kp SPACE &skq RSHIFT>;
 	    };
 
+        spc_l: space_shift_macro {
+	        compatible = "zmk,behavior-macro";
+        	label = "MACRO1";
+	        #binding-cells = <0>;
+        	bindings = <&macro_tap &kp SPACE &sk_l CURSER_L>;
+	    };
+
 	    comm_l: comm_l {
 	        compatible = "zmk,behavior-macro";
         	label = "COMMAND_Layer";
@@ -575,6 +582,15 @@
             #binding-cells = <1>;
             bindings = <&kp>;
             release-after-ms = <1000>;
+            quick-release;
+        };
+
+        sk_l: sticky_key_layer {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_KEY_LAYER";
+            #binding-cells = <1>;
+            bindings = <&mo>;
+            release-after-ms = <500>;
             quick-release;
         };
      // Shift No ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
