@@ -698,7 +698,7 @@
 &trans        &trans             &trans            &trans            &trans                &trans                                                               &trans        &trans             &trans            &trans            &trans                &trans
 &trans        &trans             &trans            &trans            &trans                &trans                                                               &trans        &trans             &trans            &trans            &trans                &trans
 &trans        &trans             &trans            &trans            &trans                &trans           &trans                          &trans              &trans        &trans             &trans            &trans            &trans                &trans
-                                                   &trans            &trans                &trans           &trans                          &trans              &kp SPACE     &trans             &trans 
+                                                   &trans            &trans                &trans           &trans                          &trans              &kp LA(F)     &trans             &trans 
                         >;
 			
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
