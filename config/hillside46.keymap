@@ -676,10 +676,10 @@
                 curser_layer {
 
                         bindings = <
-&kp  GRAVE    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp F16       &kp F19                 &kp LS(LA(LG(LC(F18))))   &kp LS(LA(LG(LC(F15))))         &trans       &trans        
-&kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &trans  &hm LGUI F20            &hm LALT LS(LA(LG(LC(F17))))  &hm LCTRL LS(LA(LG(LC(F14))))   &none        &trans        
-&none         &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &mo  ADJ_L                                         &caps_word    &trans  &kp LS(LA(LG(LC(F12)))) &kp LS(LA(LG(LC(F16))))   &kp LS(LA(LG(LC(F13))))   &trans       &trans        
-                                                        &none         &kp  LALT     &sk  LSHIFT    &mo  NAV_L            &trans        &kp  SPACE    &kp  LALT     &none
+&trans        &trans             &trans            &trans            &trans                &trans                                                               &trans        &trans             &trans            &trans            &trans                &trans
+&trans        &trans             &trans            &trans            &trans                &trans                                                               &trans        &trans             &trans            &trans            &trans                &trans
+&trans        &trans             &trans            &trans            &trans                &trans           &trans                          &trans              &trans        &trans             &trans            &trans            &trans                &trans
+                                                   &trans            &trans                &trans           &trans                          &trans              &kp SPACE     &trans             &trans 
                         >;
 			
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
