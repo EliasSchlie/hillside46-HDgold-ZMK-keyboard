@@ -57,9 +57,9 @@
         	bindings = <&macro_tap &kp SPACE &skq RSHIFT>;
 	    };
 
-        spc_l: space_shift_macro {
+        spc_l: space_layer_macro {
 	        compatible = "zmk,behavior-macro";
-        	label = "MACRO1";
+        	label = "SPACE_LAYER";
 	        #binding-cells = <0>;
         	bindings = <&macro_tap &kp SPACE &sk_l CURSER_L>;
 	    };
