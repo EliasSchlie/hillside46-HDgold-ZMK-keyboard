@@ -54,7 +54,7 @@
 	        compatible = "zmk,behavior-macro";
         	label = "MACRO1";
 	        #binding-cells = <0>;
-            bindings =
+            bindings
                 = <&macro_tab &kp SPACE>
                 , <&macro_press &kp RSHFT>
                 , <&macro_pause_for_release>
