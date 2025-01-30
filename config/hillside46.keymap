@@ -54,7 +54,7 @@
 	        compatible = "zmk,behavior-macro";
         	label = "MACRO1";
 	        #binding-cells = <0>;
-        	bindings = <&macro_tap &kp SPACE &skq RSHIFT>;
+            bindings = <&macro_tap &kp SPACE &macro_press &kp RIGHT_SHIFT &macro_release &kp RIGHT_SHIFT>;
 	    };
 
         spc_l: space_layer_macro {
