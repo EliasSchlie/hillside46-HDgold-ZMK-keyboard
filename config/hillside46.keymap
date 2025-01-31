@@ -62,9 +62,9 @@
 	        #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp SPACE >
-                , <&macro_press &skq RSHIFT>
+                , <&macro_press &kp RSHIFT>
                 , <&macro_pause_for_release>
-                , <&macro_release &skq RSHIFT>;
+                , <&macro_release &kp RSHIFT>;
 	    };
 
         spc_l: space_layer_macro {
