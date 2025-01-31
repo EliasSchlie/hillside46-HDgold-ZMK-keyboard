@@ -61,8 +61,8 @@
         	label = "SPACE_SHIFT_HOLD";
 	        #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp SPACE>
-                , <&macro_press &kp RSHIFT>
+                = <&macro_press &kp SPACE &kp RSHIFT>
+                , <&macro_release &kp SPACE>
                 , <&macro_pause_for_release>
                 , <&macro_release &kp RSHIFT>;
 	    };
