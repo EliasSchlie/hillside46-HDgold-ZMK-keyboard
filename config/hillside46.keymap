@@ -605,7 +605,6 @@
             quick_tap_ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&spc_sh>;
-            tap-hold-release;
         };
         rbk_tild_lbkt: rbk_tild_lbkt {
             compatible = "zmk,behavior-hold-tap";
