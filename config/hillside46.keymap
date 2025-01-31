@@ -43,6 +43,11 @@
 #define LEFT_ROWS_012   LEFT_ROW_0 LEFT_ROW_1 LEFT_ROW_2
 #define RIGT_ROWS_012   RIGT_ROW_0 RIGT_ROW_1 RIGT_ROW_2
 
+&sl {
+    release-after-ms = <500>;
+    quick-release;
+};
+
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 / {
@@ -71,7 +76,7 @@
 	        compatible = "zmk,behavior-macro";
         	label = "SPACE_LAYER";
 	        #binding-cells = <0>;
-        	bindings = <&macro_tap &kp SPACE &sk_l CURSER_L>;
+        	bindings = <&macro_tap &kp SPACE &sl CURSER_L>;
 	    };
 
 	    comm_l: comm_l {
@@ -600,15 +605,6 @@
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&bkt_tilde>;
-        };
-        sp_shi: sp_shi {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SPACE_SHIFT_HOLD_TAP";
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&sp_sh>, <&spc_sh>;
         };
     };
 
