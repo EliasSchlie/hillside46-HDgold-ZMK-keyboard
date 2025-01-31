@@ -66,9 +66,10 @@
         	label = "SPACE_SHIFT_HOLD";
 	        #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp SPACE &kt RSHIFT &skq LSHIFT>
+                = <&macro_tap &kp SPACE>
+                , <&macro_press &sh_s_ht RSHIFT RSHIFT>
                 , <&macro_pause_for_release>
-                , <&macro_tap &kt RSHIFT>;
+                , <&macro_release &sh_s_ht RSHIFT RSHIFT>;
 	    };
 
         spc_l: space_layer_macro {
@@ -602,8 +603,8 @@
             #binding-cells = <2>;
             tapping-term-ms = <130>;
             quick_tap_ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&spc_sh>;
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&skq>;
         };
         rbk_tild_lbkt: rbk_tild_lbkt {
             compatible = "zmk,behavior-hold-tap";
