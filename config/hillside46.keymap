@@ -54,11 +54,17 @@
 	        compatible = "zmk,behavior-macro";
         	label = "MACRO1";
 	        #binding-cells = <0>;
+            bindings = <&macro_tap &kp SPACE &skq RSHIFT>;
+	    };
+        sp_sh: sp_sh {
+	        compatible = "zmk,behavior-macro";
+        	label = "SPACE_SHIFT_HOLD";
+	        #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp SPACE>
-                , <&macro_press &kp RSHFT>
+                , <&macro_press &kp RSHIFT>
                 , <&macro_pause_for_release>
-                , <&macro_release &kp RSHFT>;
+                , <&macro_release &kp RSHIFT>;
 	    };
 
         spc_l: space_layer_macro {
@@ -617,6 +623,15 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&bkt_tilde>;
         };
+        sp_shi: sp_shi {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACE_SHIFT_HOLD_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&sp_sh>, <&spc_sh>;
+        };
     };
 
 
@@ -690,7 +705,7 @@
 &slash_bslash &kp  W        &kp  X        &kp  M        &kp  G        &kp  J                                                                         &hash_per      &dot_grv     &rbk_tild_lbkt RBKT LBKT   &dqt_degree    &sqt_at          &kp DEL
 &kp  TAB      &hm_l NAV_L C &hm LCTRL S   &hm LALT N    &gui_l A T    &kp  K                                                                         &comma_par    &gui_l A A    &hm LALT  E   &hm LCTRL  I   &hm_l NUM_L H    &kp  ENTER
 &kp EQUAL     &kp  P        &kp  F        &kp  L        &kp  D        &kp  V        &mo  ADJ_L                                         &none         &kp MINUS     &kp  U        &kp  O        &kp  Y         &kp  B           &none
-                                      &kp DEL       &kp BSPC      &hm_l SYM_L R    &h_h LG(LC(LALT)) LS(LA(LG(LC(F19))))   &h_h LG(LC(LS(LALT))) LS(LA(LG(LC(F20))))  &sh_s LSHIFT  SPACE &spc_sh &kp C_PLAY_PAUSE
+                                      &kp DEL       &kp BSPC      &hm_l SYM_L R    &h_h LG(LC(LALT)) LS(LA(LG(LC(F19))))   &h_h LG(LC(LS(LALT))) LS(LA(LG(LC(F20))))  &sh_s LSHIFT  SPACE &sp_shi LSHIFT SPACE &kp C_PLAY_PAUSE
                         >;
 			
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
