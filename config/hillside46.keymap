@@ -71,6 +71,7 @@
                 , <&macro_tap &skq LSHIFT>
                 , <&macro_pause_for_release>
                 , <&macro_release &kp RSHIFT>;
+                , <&macro_tap &kp RSHIFT>;
 	    };
 
         spc_l: space_layer_macro {
