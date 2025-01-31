@@ -576,7 +576,6 @@
             bindings = <&kp>;
             release-after-ms = <1000>;
             quick-release;
-            cancel-on-press;
         };
 
         sk_l: sticky_key_layer {
