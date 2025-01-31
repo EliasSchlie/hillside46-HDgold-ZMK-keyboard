@@ -46,7 +46,6 @@
 &sl {
     release-after-ms = <500>;
     quick-release;
-    cancel-on-press;
 };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -577,6 +576,7 @@
             bindings = <&kp>;
             release-after-ms = <1000>;
             quick-release;
+            cancel-on-press;
         };
 
         sk_l: sticky_key_layer {
