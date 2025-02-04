@@ -749,7 +749,7 @@
 &none     &none         &kp  LG(X)      &kp  LG(C)     &kp  LG(V)    &kp  LG(LS(Z))                                                                      &kp   K_APP   &leftleft    &dowdow_fold   &upup_fold    &rightright   &trans
 &none     &none         &hm_f LCTRL F1  &hm_f LALT F2  &hm_f LGUI F3 &kp LG(Z)                                                                           &kp F17       &kp  LEFT    &kp   DOWN     &kp   UP      &kp  RIGHT    &trans
 &none     &none         &kp  F4         &kp  LG(Q)     &kp  LG(W)    &kp  LG(LS(K))      &trans                                           &trans               &kp LG(A)     &pg_l     &hm C_AC_SCROLL_DOWN PG_DN &hm C_AC_SCROLL_UP PG_UP &pg_r      &trans
-                                                       &trans        &trans        &hm_l SYM_L RETURN  &scroll           &mo  SYM_L  &hm LSHIFT SPACE     &kp TAB       &trans 
+                                                       &trans        &trans        &hm_l SYM_L RETURN  &scroll           &kp LA(LS(LG(LC(F20))))  &hm LSHIFT SPACE     &kp TAB       &trans 
                         >;
 			
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
