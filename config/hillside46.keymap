@@ -468,7 +468,7 @@
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT)>;
+            keep-mods = <()>;
         };
         slash_bslash: slash_bslash {
             compatible = "zmk,behavior-mod-morph";
@@ -476,7 +476,7 @@
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp BSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT)>;
+            keep-mods = <()>;
         };
         hash_per: hash_per {
             compatible = "zmk,behavior-mod-morph";
