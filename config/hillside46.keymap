@@ -105,6 +105,13 @@
                 , <&macro_tap &kp LA(LS(LC(F18)))>;
         };
 
+        // fixing grave and backslash
+        grav: grav {
+            compatible = "zmk,behavior-macro";
+            label = "GRAVE";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp GRAVE>;
+	    };
         
      // Arrows ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
             upupup: upupup {
@@ -465,21 +472,14 @@
         dot_grv: dot_grv {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp GRAVE>;
+            bindings = <&kp DOT>, <&grav>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         slash_bslash: slash_bslash {
             compatible = "zmk,behavior-mod-morph";
             label = "SLASH_BSLASH";
             #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&bslh_nosh>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        bslh_nosh: bslh_nosh {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BSLH_NO_SHIFT";
-            #binding-cells = <0>;
-            bindings = <&kp BSLH>, <&kp BSLH>;
+            bindings = <&kp SLASH>, <&kp BSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         hash_per: hash_per {
