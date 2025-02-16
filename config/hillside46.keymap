@@ -462,14 +462,14 @@
 
         dot_grv: dot_grv {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOT_GRAVE";
+            label = "DOT_GRV";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         slash_bslash: slash_bslash {
             compatible = "zmk,behavior-mod-morph";
-            label = "HASH_AT";
+            label = "SLASH_BSLASH";
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp BACKSLASH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
