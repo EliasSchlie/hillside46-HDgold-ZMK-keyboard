@@ -106,12 +106,6 @@
         };
 
         // fixing grave and backslash
-        grav: grav {
-            compatible = "zmk,behavior-macro";
-            label = "GRAV_GRAVE";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp F16 &kp GRAVE>;
-	    };
         b_slsh: b_slsh {
             compatible = "zmk,behavior-macro";
             label = "BSLASH_BSLASH";
@@ -478,7 +472,7 @@
         dot_brc: dot_brc {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp RBKT>;
+            bindings = <&kp DOT>, <&kp LBKT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         slash_bslash: slash_bslash {
