@@ -110,13 +110,13 @@
             compatible = "zmk,behavior-macro";
             label = "GRAV_GRAVE";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp GRAVE>;
+            bindings = <&macro_tap &kp F17 &kp GRAVE>;
 	    };
         b_slsh: b_slsh {
             compatible = "zmk,behavior-macro";
             label = "BSLASH_BSLASH";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp BSLH>;
+            bindings = <&macro_tap &kp F17 &kp BSLH>;
 	    };
         
      // Arrows ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
