@@ -472,7 +472,7 @@
         dot_brc: dot_brc {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp LBKT>;
+            bindings = <&kp DOT>, <&kp LBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         slash_bslash: slash_bslash {
