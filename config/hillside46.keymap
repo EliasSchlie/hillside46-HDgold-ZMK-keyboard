@@ -485,7 +485,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "SLASH_BSLASH";
             #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp BSLH>;
+            bindings = <&kp SLASH>, <&b_slsh>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         hash_per: hash_per {
