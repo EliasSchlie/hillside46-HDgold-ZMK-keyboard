@@ -104,6 +104,8 @@
                 , <&macro_pause_for_release>
                 , <&macro_tap &kp LA(LS(LC(F18)))>;
         };
+
+        
      // Arrows ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
             upupup: upupup {
              label = "UPUPUP";
@@ -466,6 +468,7 @@
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
         slash_bslash: slash_bslash {
             compatible = "zmk,behavior-mod-morph";
@@ -473,6 +476,7 @@
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp BSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
         hash_per: hash_per {
             compatible = "zmk,behavior-mod-morph";
