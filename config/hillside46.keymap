@@ -480,7 +480,14 @@
             compatible = "zmk,behavior-mod-morph";
             label = "SLASH_BSLASH";
             #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp BSLH>;
+            bindings = <&kp SLASH>, <&bslh_nosh>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        bslh_nosh: bslh_nosh {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BSLH_NO_SHIFT";
+            #binding-cells = <0>;
+            bindings = <&kp BSLH>, <&kp BSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         hash_per: hash_per {
