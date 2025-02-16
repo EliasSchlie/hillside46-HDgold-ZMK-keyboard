@@ -466,9 +466,15 @@
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_GRV";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp GRAVE>;
+            bindings = <&kp DOT>, <&grv_nosh>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LGUI)>;
+        };
+        grv_nosh: grv_nosh {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRV_NO_SHIFT";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>, <&kp GRAVE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         slash_bslash: slash_bslash {
             compatible = "zmk,behavior-mod-morph";
@@ -476,7 +482,6 @@
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp BSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LGUI)>;
         };
         hash_per: hash_per {
             compatible = "zmk,behavior-mod-morph";
