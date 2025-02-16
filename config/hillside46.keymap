@@ -108,9 +108,15 @@
         // fixing grave and backslash
         grav: grav {
             compatible = "zmk,behavior-macro";
-            label = "GRAVE";
+            label = "GRAV_GRAVE";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp GRAVE>;
+	    };
+        b_slsh: b_slsh {
+            compatible = "zmk,behavior-macro";
+            label = "BSLASH_BSLASH";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp BSLH>;
 	    };
         
      // Arrows ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
