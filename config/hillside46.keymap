@@ -219,8 +219,10 @@
                 <&kp RSHFT &kp RALT>;
         };
         uni_00: uni_00 {
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-macro-two-param";
             label = "UNICODE_00";
+            wait-ms = <0>;
+            tap-ms = <0>;
             #binding-cells = <2>;
             bindings
                 = <&macro_press   &kp LALT>
