@@ -224,7 +224,7 @@
             label = "UNICODE_00";
             wait-ms = <0>;
             tap-ms = <0>;
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             bindings
                 = <&macro_press   &kp LALT>
                 , <&macro_tap     &kp KP_N0 &kp KP_N0>
@@ -242,7 +242,7 @@
             label = "UNICODE_01";
             wait-ms = <0>;
             tap-ms = <0>;
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
                 <&macro_tap     &kp KP_N0 &kp KP_N1>,
@@ -260,7 +260,7 @@
             label = "UNICODE_03";
             wait-ms = <0>;
             tap-ms = <0>;
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
                 <&macro_tap     &kp KP_N0 &kp KP_N3>,
@@ -278,7 +278,7 @@
             label = "UNICODE_20";
             wait-ms = <0>;
             tap-ms = <0>;
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
                 <&macro_tap     &kp KP_N2 &kp KP_N0>,
@@ -296,7 +296,7 @@
             label = "UNICODE_22";
             wait-ms = <0>;
             tap-ms = <0>;
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
                 <&macro_tap     &kp KP_N2 &kp KP_N2>,
@@ -313,7 +313,7 @@
             label = "UNICODE_22";
             wait-ms = <0>;
             tap-ms = <0>;
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
                 <&macro_tap     &kp KP_N2 &kp KP_N2>,
@@ -330,7 +330,7 @@
             label = "UNICODE_25";
             wait-ms = <0>;
             tap-ms = <0>;
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
                 <&macro_tap     &kp KP_N2 &kp KP_N5>,
