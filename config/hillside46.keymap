@@ -223,7 +223,7 @@
             compatible = "zmk,behavior-macro-two-param";
             label = "UNICODE_00";
             wait-ms = <0>;
-            tap-ms = <0>;
+            tap-ms = <5>;
             #binding-cells = <2>;
             bindings
                 = <&macro_press   &kp LALT>
@@ -241,7 +241,7 @@
             compatible = "zmk,behavior-macro-two-param";
             label = "UNICODE_01";
             wait-ms = <0>;
-            tap-ms = <0>;
+            tap-ms = <5>;
             #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
@@ -259,7 +259,7 @@
             compatible = "zmk,behavior-macro-two-param";
             label = "UNICODE_03";
             wait-ms = <0>;
-            tap-ms = <0>;
+            tap-ms = <5>;
             #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
@@ -277,7 +277,7 @@
             compatible = "zmk,behavior-macro-two-param";
             label = "UNICODE_20";
             wait-ms = <0>;
-            tap-ms = <0>;
+            tap-ms = <5>;
             #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
@@ -295,7 +295,7 @@
             compatible = "zmk,behavior-macro-two-param";
             label = "UNICODE_22";
             wait-ms = <0>;
-            tap-ms = <0>;
+            tap-ms = <5>;
             #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
@@ -313,7 +313,7 @@
             compatible = "zmk,behavior-macro-two-param";
             label = "UNICODE_27";
             wait-ms = <0>;
-            tap-ms = <0>;
+            tap-ms = <5>;
             #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
