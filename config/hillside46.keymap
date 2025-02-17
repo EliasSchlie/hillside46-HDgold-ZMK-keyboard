@@ -307,24 +307,7 @@
                 <&macro_release &kp LALT>
                 ;
         };
-        /* For Unicode codes in the U+22XX range (many math symbols) */
-        uni_22: uni_22 {
-            compatible = "zmk,behavior-macro-two-param";
-            label = "UNICODE_22";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <2>;
-            bindings =
-                <&macro_press   &kp LALT>,
-                <&macro_tap     &kp KP_N2 &kp KP_N2>,
-                <&macro_param_1to1>,
-                <&macro_tap     &kp MACRO_PLACEHOLDER>,
-                <&macro_param_2to1>,
-                <&macro_tap     &kp MACRO_PLACEHOLDER>,
-                <&macro_release &kp LALT>
-                ;
-        };
-        /* For Unicode codes in the U+27XX range (arrows, etc.) */
+        /* For Unicode codes in the U+25XX range (arrows, etc.) */
         uni_25: uni_25 {
             compatible = "zmk,behavior-macro-two-param";
             label = "UNICODE_25";
@@ -334,6 +317,23 @@
             bindings =
                 <&macro_press   &kp LALT>,
                 <&macro_tap     &kp KP_N2 &kp KP_N5>,
+                <&macro_param_1to1>,
+                <&macro_tap     &kp MACRO_PLACEHOLDER>,
+                <&macro_param_2to1>,
+                <&macro_tap     &kp MACRO_PLACEHOLDER>,
+                <&macro_release &kp LALT>
+                ;
+        };
+        /* For Unicode codes in the U+27XX range (many math symbols) */
+        uni_27: uni_27 {
+            compatible = "zmk,behavior-macro-two-param";
+            label = "UNICODE_22";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <2>;
+            bindings =
+                <&macro_press   &kp LALT>,
+                <&macro_tap     &kp KP_N2 &kp KP_N7>,
                 <&macro_param_1to1>,
                 <&macro_tap     &kp MACRO_PLACEHOLDER>,
                 <&macro_param_2to1>,
