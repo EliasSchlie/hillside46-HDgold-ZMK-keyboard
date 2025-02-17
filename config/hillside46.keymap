@@ -766,7 +766,6 @@
                 sym_layer {
 
                         bindings = <
-                        bindings = <
 &kp U(00F6)   &kp U(00E4)   &kp U(00FC)   &kp U(221D)   &kp U(2227)   &kp U(00AC)                                                                   &kp U(27F7)    &kp U(27A1)  &kp U(221A)  &kp U(2211)   &kp U(221E)   &kp U(03C0)
 &kp U(2208)   &kp U(2209)   &kp U(222A)   &kp U(2229)   &kp U(2282)   &kp U(2283)                                                                   &kp U(21D2)    &kp U(21D0)  &kp U(21D4)  &kp U(2234)   &kp U(2235)   &kp U(2203)
 &kp U(03B2)   &kp U(03B3)   &kp U(03B4)   &kp U(03B5)   &kp U(03B6)   &kp U(03B7)   &mo  ADJ_L                                     &sys_reset       &kp U(03B8)    &kp U(03B9)  &kp U(03BA)  &kp U(03BB)   &kp U(03BC)   &kp U(03BD)
