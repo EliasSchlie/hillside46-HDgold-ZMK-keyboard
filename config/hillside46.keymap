@@ -223,7 +223,7 @@
             compatible = "zmk,behavior-macro-two-param";
             label = "UNICODE_00";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <0>;
             #binding-cells = <2>;
             bindings
                 = <&macro_press   &kp LALT>
@@ -241,7 +241,7 @@
             compatible = "zmk,behavior-macro-two-param";
             label = "UNICODE_01";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <0>;
             #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
@@ -259,7 +259,7 @@
             compatible = "zmk,behavior-macro-two-param";
             label = "UNICODE_03";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <0>;
             #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
@@ -277,7 +277,7 @@
             compatible = "zmk,behavior-macro-two-param";
             label = "UNICODE_20";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <0>;
             #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
@@ -295,7 +295,7 @@
             compatible = "zmk,behavior-macro-two-param";
             label = "UNICODE_22";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <0>;
             #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
@@ -313,7 +313,7 @@
             compatible = "zmk,behavior-macro-two-param";
             label = "UNICODE_27";
             wait-ms = <0>;
-            tap-ms = <5>;
+            tap-ms = <0>;
             #binding-cells = <2>;
             bindings =
                 <&macro_press   &kp LALT>,
@@ -883,7 +883,7 @@
 
                         bindings = <
 &uni_27 F 7   &uni_22 2 7   &uni_00 A C   &uni_27 A 1   &uni_22 3 4   &uni_22 A 5                                                                &uni_22 1 1   &uni_22 1 A   &uni_22 4 8   &uni_00 B 1   &uni_22 1 E   &uni_03 C 0
-&kp TAB       &uni_00 E 7   &uni_00 D F   &uni_00 F 1   &uni_27 F 7   &uni_03 B A                                                                &uni_22 0 2   &uni_00 E 4   &uni_22 0 8   &uni_22 2 9   &uni_01 2 7   &kp ENTER
+&kp TAB       &uni_00 E 7   &uni_00 D F   &uni_00 F 1   &uni_27 F 7   &uni_03 B A                                                                &uni_22 0 2   &uni_00 E N4   &uni_22 0 8   &uni_22 2 9   &uni_01 2 7   &kp ENTER
 &uni_22 6 0   &uni_22 1 D   &uni_03 C 6   &uni_03 B B   &uni_03 B 4   &uni_03 B D   &mo ADJ_L                                     &sys_reset     &uni_20 1 4   &uni_00 F 6   &uni_00 F C   &uni_00 A 5   &uni_03 B 2   &none
                                     &kp DEL        &kp BSPC       &hm_l SYM_L R   &h_h LG(LC(LALT)) LS(LA(LG(LC(F19))))          &h_h LG(LC(LS(LALT))) LS(LA(LG(LC(F20))))   &sh_s LSHIFT  SPACE   &spc_sh   &kp C_PLAY_PAUSE
                         >;
