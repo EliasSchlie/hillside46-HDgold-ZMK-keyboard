@@ -218,6 +218,20 @@
                 <&macro_release>,
                 <&kp RSHFT &kp RALT>;
         };
+        uni_00: uni_00 {
+            compatible = "zmk,behavior-macro";
+            label = "UNICODE_00";
+            #binding-cells = <2>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N3>
+                , <&macro_release &kp LALT>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_param_2to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                ;
+        };
         a_uml: a_uml {
             compatible = "zmk,behavior-macro";
             label = "A_UML";
@@ -766,7 +780,7 @@
                 sym_layer {
 
                         bindings = <
-&trans   &kp  N        &kp  N    &kp  ∧    &kp N   &kp  N                                                                &trans        &trans             &trans            &trans            &kp  LS(LA(LG(LC(F15))))          &trans
+&trans   &kp  N        &kp  N    &uni_00 A B   &kp N   &kp  N                                                                &trans        &trans             &trans            &trans            &kp  LS(LA(LG(LC(F15))))          &trans
 &trans   &hm_l NAV_L N &hm LCTRL N &hm LALT N         &hm LGUI N  &kp  N                                                                     &comma_par    &a_um  LGUI A    &hm LALT LA(E)  &hm LCTRL LA(S) &hm_l NUM_L N  &trans
 &trans   &kp  N     &kp N       &kp  N            &kp  N   &kp N   &trans                                  &trans        &trans          &u_um  LGUI U        &o_um  LGUI O       &trans     &kp  N          &trans
                                                       &trans        &trans        &trans       &trans              &trans       &hm_l  UML_L SPACE   &trans        &trans 
