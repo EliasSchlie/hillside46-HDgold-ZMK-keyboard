@@ -766,7 +766,7 @@
                 sym_layer {
 
                         bindings = <
-&trans   &kp  N        &kp  N    &kp  N    &kp U(00F6)  &kp  N                                                                &trans        &trans             &trans            &trans            &kp  LS(LA(LG(LC(F15))))          &trans
+&trans   &kp  N        &kp  N    &kp  N    &kp N   &kp  N                                                                &trans        &trans             &trans            &trans            &kp  LS(LA(LG(LC(F15))))          &trans
 &trans   &hm_l NAV_L N &hm LCTRL N &hm LALT N         &hm LGUI N  &kp  N                                                                     &comma_par    &a_um  LGUI A    &hm LALT LA(E)  &hm LCTRL LA(S) &hm_l NUM_L N  &trans
 &trans   &kp  N     &kp N       &kp  N            &kp  N   &kp N   &trans                                  &trans        &trans          &u_um  LGUI U        &o_um  LGUI O       &trans     &kp  N          &trans
                                                       &trans        &trans        &trans       &trans              &trans       &hm_l  UML_L SPACE   &trans        &trans 
