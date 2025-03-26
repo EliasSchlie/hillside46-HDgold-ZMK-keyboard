@@ -981,7 +981,7 @@
 &trans        &kp  CARET     &kp  N7       &kp  N8       &kp  N9        &kp  LT                                                                         &trans        &kp DOT           &trans         &trans         &trans       &trans        
 &trans        &hm_l wNAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3    &kp  GT                                                                         &trans        &hm LGUI RPAR    &hm LALT GRAVE  &hm LCTRL LA(LS(NUMBER_2))    &none        &trans        
 &trans        &kp  PIPE     &kp  N4       &kp  N5       &kp  N6        &kp  DOLLAR  &trans                                             &trans          &trans        &kp  AMPS        &kp  RBRC        &kp LA(LS(NUMBER_8))      &trans       &trans        
-                                                        &trans         &trans        &hm_l wSYM_L RETURN    &trans            &trans     &hm_l F_L SPACE     &hm_l F_L SPACE  &trans
+                                                        &trans         &trans        &hm_l wSYM_L RETURN    &trans            &trans     &hm_l wF_L SPACE     &hm_l wF_L SPACE  &trans
                         >;
 			
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
