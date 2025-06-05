@@ -778,7 +778,7 @@
             timeout-ms = <70>;
             key-positions = <1 2>;
             bindings = <&kp Z>;
-            layers = <0, 7>;
+            layers = <0 7>;
         };
 
         combo_esc {
@@ -791,7 +791,7 @@
             timeout-ms = <70>;
             key-positions = <2 4>;
             bindings = <&lk_qu Q U>;
-            layers = <0, 7>;
+            layers = <0 7>;
         };
 
         combo_COLON {
