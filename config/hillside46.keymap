@@ -788,6 +788,12 @@
             bindings = <&kp ESC>;
         };
 
+        combo_excali {
+            timeout-ms = <50>;
+            key-positions = <13 14 15 16>;
+            bindings = <&to EXCALI>;
+        };
+
         combo_qu {
             timeout-ms = <70>;
             key-positions = <2 4>;
