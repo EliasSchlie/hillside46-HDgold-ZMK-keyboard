@@ -1048,10 +1048,10 @@
                 excali_layer {
 
                         bindings = <
-&kp  LC(L)      &kp  LC(H)     &kp  N7       &kp  N8       &kp  N9        &kp  LC(G)                                                            &to  HDVB_L       &to  HDVB_L        &to  HDVB_L       &to  HDVB_L        &to  HDVB_L     &to  HDVB_L   
-&trans        &hm_l wNAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3    &kp  LC(RBKT)                                                          &to  HDVB_L       &to  HDVB_L        &to  HDVB_L       &to  HDVB_L        &to  HDVB_L     &to  HDVB_L   
-&kp LC(V)        &kp  F    &kp  N4       &kp  N5       &kp  N6        &kp  LC(LBKT) &trans                                 &trans               &to  HDVB_L       &to  HDVB_L        &to  HDVB_L       &to  HDVB_L        &to  HDVB_L     &to  HDVB_L   
-                                                   &trans            &trans                &trans       &trans                              &trans              &trans        &trans             &trans 
+&kp  LG(L)      &kp  LG(H)     &kp  N7       &kp  N8       &kp  N9        &kp  LG(G)                                                            &to  HDVB_L       &to  HDVB_L        &to  HDVB_L       &to  HDVB_L        &to  HDVB_L     &to  HDVB_L   
+&trans        &hm_l wNAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3    &kp  LG(RBKT)                                                          &to  HDVB_L       &to  HDVB_L        &to  HDVB_L       &to  HDVB_L        &to  HDVB_L     &to  HDVB_L   
+&kp LG(V)        &kp  F    &kp  N4       &kp  N5       &kp  N6        &kp  LG(LBKT) &to  HDVB_L                             &trans               &to  HDVB_L       &to  HDVB_L        &to  HDVB_L       &to  HDVB_L        &to  HDVB_L     &to  HDVB_L   
+                                                   &trans            &trans                &trans       &to  HDVB_L                             &trans              &trans        &trans             &trans 
                         >;
 			
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
