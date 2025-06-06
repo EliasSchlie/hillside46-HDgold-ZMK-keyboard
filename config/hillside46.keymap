@@ -28,9 +28,9 @@
 #define wNAV_L    11
 #define wSYM_L    12
 
-#define EXCALI   14
-#define UML_L    15
-#define ADJ_L    16
+#define EXCALI   13
+#define UML_L    14
+#define ADJ_L    15
 
 
 #define LEFT_ROW_0       0  1  2  3  4  5  
