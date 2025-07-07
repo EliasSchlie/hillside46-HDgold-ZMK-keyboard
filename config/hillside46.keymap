@@ -667,19 +667,19 @@
         a_um: a_um  {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&a_cap_uml>, <&a_uml>;
+            bindings = <&a_uml>, <&a_cap_uml>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         o_um: o_um {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&o_cap_uml>, <&o_uml>;
+            bindings = <&o_uml>, <&o_cap_uml>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         u_um: u_um {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&u_cap_uml>, <&u_uml>;
+            bindings = <&u_uml>, <&u_cap_uml>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
