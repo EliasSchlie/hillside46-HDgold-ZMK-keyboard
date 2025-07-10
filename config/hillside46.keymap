@@ -101,8 +101,8 @@
             tap-ms = <0>;
             bindings 
                 = <&macro_tap &kp LA(LS(LC(F17)))>
+                , <&macro_wait_time 50>
                 , <&macro_tap &scroll_toggle>
-                //, <&macro_wait_time 30>
                 //, <&macro_tap &kp &kp LG(LC(LS(LA(R))))>
                 , <&macro_pause_for_release>
                 , <&macro_tap &scroll_toggle>
