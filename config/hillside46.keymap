@@ -845,7 +845,7 @@
         to_scroll_layer {
             timeout-ms = <50>;
             key-positions = <7 9>;
-            bindings = <&tog SCROLL_L>;
+            bindings = <&scroll_toggle>;
         };
 
     };
