@@ -463,6 +463,16 @@
              bindings = <&macro_tap &kp LG(X) &kp SQT &kp SQT &kp LEFT &kp LG(V)>
                  ;
          };
+
+         gg: gg {
+             label = "gg";
+             compatible = "zmk,behavior-macro";
+             #binding-cells = <0>;
+             wait-ms = <0>;
+             tap-ms = <0>;
+             bindings = <&macro_tap &kp G &kp G>
+                 ;
+         };
     };
 
     behaviors {
@@ -1071,9 +1081,9 @@
                 scroll_layer {
 
                         bindings = <
-&trans        &trans             &kp LS(LA(F20))   &trans            &trans                &trans                                                               &trans        &trans             &trans            &trans            &trans                &trans
-&trans        &kp LS(LA(F16))    &trans            &trans            &trans                &trans                                                               &trans        &kp H         &kp J            &kp K            &kp L                &trans
-&trans        &trans             &trans            &trans            &trans                &kp LS(LA(F18))  &trans                          &trans              &trans        &u_cap_uml         &o_cap_uml        &trans            &trans                &trans
+&trans         &kp  CARET     &kp  N7       &kp  N8       &kp  N9        &kp  LT                                                                &trans        &kp  LEFT    &kp   DOWN     &kp   UP      &kp  RIGHT          &trans
+&trans        &hm_l NAV_L N0 &hm LCTRL N1  &hm LALT N2   &hm LGUI N3    &kp  GT                                                              &trans        &kp H         &kp J            &kp K            &kp L                &trans
+&trans       &kp  PIPE     &kp  N4       &kp  N5       &kp  N6        &kp  DOLLAR   &trans                          &trans              &trans        &trans         &kp G        &gg             &trans                &trans
                                                    &trans            &trans                &trans       &trans                              &trans              &trans        &trans             &trans 
                         >;
 			
