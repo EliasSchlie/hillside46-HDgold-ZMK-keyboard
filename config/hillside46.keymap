@@ -480,7 +480,7 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&macro_tap &kp LG(LS(LA(F19))) &tog SCROLL_L>
+            bindings = <&macro_tap &kp LG(LS(F19)) &tog SCROLL_L>
                  ;
          };
     };
@@ -864,7 +864,7 @@
 &slash_bslash &kp  W        &kp  X        &kp  M        &kp  G        &kp  J                                                                         &hash_per      &dot_brc     &rbk_tild_lbkt RBKT LBKT   &dqt_star    &sqt_at          &hm LC(LS(F18)) LC(LS(F15))
 &kp  TAB      &hm_l NAV_L C &hm LCTRL S   &hm LALT N    &gui_l A T    &kp  K                                                                         &comma_par    &gui_l A A    &hm LALT  E   &hm LCTRL  I   &hm_l NUM_L H    &kp  ENTER
 &kp EQUAL     &kp  P        &kp  F        &kp  L        &kp  D        &kp  V        &mo  ADJ_L                                         &sys_reset       &kp MINUS     &kp  U        &kp  O        &kp  Y         &kp  B           &tog EXCALI
-                                      &kp DEL       &kp BSPC      &hm_l SYM_L R    &h_h LG(LC(LALT)) LS(LA(LG(LC(F19))))   &h_h LG(LC(LS(LALT))) LS(LA(LG(LC(F20))))  &sh_s LSHIFT  SPACE &sp_sh &kp C_PLAY_PAUSE
+                                    //   &kp DEL       &kp BSPC      &hm_l SYM_L R    &h_h LG(LC(LALT)) LS(LA(LG(LC(F19))))   &h_h LG(LC(LS(LALT))) LS(LA(LG(LC(F20))))  &sh_s LSHIFT  SPACE &sp_sh &kp C_PLAY_PAUSE
                         >;
 			
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -930,7 +930,7 @@
 
 
                         bindings = <
-&kp LA(LS(F14))  &kp RA(LC(F15))  &kp LC(LS(F16))  &kp LG(LA(F17))  &kp LC(LG(F18))  &kp RA(LS(F19))                                                               &kp LA(LC(F20))  &kp LC(LS(F17))  &kp RA(LS(F19))  &kp LA(RA(SLASH))  &trans          &trans
+&kp LA(LS(F14))  &kp RA(LC(F15))  &kp LC(LS(F16))  &kp LG(LA(F17))  &kp LC(LG(F18))  &kp RA(LS(F19))                                                               &kp LA(LC(F20))  &kp LC(LS(F17))  &kp LA(LG(F19))  &kp LA(RA(SLASH))  &trans          &trans
 &kp LA(F24)      &kp RA(LS(F13))  &kp LC(LS(F12))  &kp LG(LA(F11))  &kp LC(LS(F11))      &kp LA(RA(F10))                                                               &kp LC(LG(F9))   &a_um   &kp LA(LC(F7))   &kp LC(RA(F6))   &kp RA(LS(F5))  &kp ENTER
 &kp LG(LC(F4))   &kp LA(RA(F3))   &kp LC(LS(F2))   &kp LG(LA(F1))   &kp RA(LS(F8))  &kp LC(LG(F15))  &mo ADJ_L                                     &sys_reset     &kp LA(LC(F16))  &u_um  &o_um &kp LG(LA(F18))   &kp LC(LG(F20))  &none
                                     &kp DEL        &kp BSPC       &hm_l SYM_L R   &h_h LG(LC(LALT)) LS(LA(LG(LC(F21))))          &h_h LG(LC(LS(LALT))) LS(LA(LG(LC(F22))))   &hm_l SCROLL_L  SPACE   &spc_sh   &kp C_PLAY_PAUSE
