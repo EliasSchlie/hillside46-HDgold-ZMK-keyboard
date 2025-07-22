@@ -946,7 +946,7 @@
 
                         bindings = <
 &trans        &trans             &kp LS(LA(F20))   &trans            &trans                &trans                                                               &trans        &trans             &trans            &trans            &trans                &trans
-&trans        &kp LS(LA(F16))    &trans            &trans            &trans                &trans                                                               &trans        &kp LS(LA(F19))    &trans            &trans            &trans                &trans
+&trans        &kp LS(LA(F16))    &trans            &trans            &trans                &trans                                                               &trans        &kp LG(LA(F19))    &trans            &trans            &trans                &trans
 &trans        &trans             &trans            &trans            &trans                &kp LS(LA(F18))  &trans                          &trans              &trans        &trans             &trans            &trans            &trans                &trans
                                                    &trans            &trans                &trans       &trans                              &trans              &trans        &trans             &trans 
                         >;
