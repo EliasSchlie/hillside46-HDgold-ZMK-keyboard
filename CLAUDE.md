@@ -14,4 +14,4 @@ Split ergonomic keyboard firmware config. See [README.md](README.md) for full do
 - Home row mods use tap-preferred flavor, 170ms tapping term.
 - Symbol layer outputs F-key combos mapped to Unicode via external tool (Karabiner/BTT).
 - Umlauts use macOS Alt+U dead-key method.
-- Build triggers on push via GitHub Actions (nice_nano_v2, left + right shields).
+- Build triggers on push via GitHub Actions (nice_nano//zmk, left + right shields).

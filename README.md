@@ -311,8 +311,8 @@ Hold `'`, `"`, or `,`(→`(`) to wrap the current selection:
 ## Building
 
 Pushing any non-`.md` change triggers a GitHub Actions build for both halves:
-- `nice_nano_v2` + `hillside46_left`
-- `nice_nano_v2` + `hillside46_right`
+- `nice_nano//zmk` + `hillside46_left`
+- `nice_nano//zmk` + `hillside46_right`
 
 Download the firmware artifact from the Actions tab and flash via [ZMK instructions](https://zmk.dev/docs/user-setup#installing-the-firmware).
 
