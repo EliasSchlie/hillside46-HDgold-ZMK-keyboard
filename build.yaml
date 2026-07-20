@@ -19,3 +19,8 @@ include:
     shield: hillside46_left
   - board: nice_nano//zmk
     shield: hillside46_right
+  # Recovery firmware: wipes all BT bonds (both host profiles and
+  # half-to-half pairing). Flash to both halves, re-pair halves,
+  # then reflash normal firmware.
+  - board: nice_nano//zmk
+    shield: settings_reset
