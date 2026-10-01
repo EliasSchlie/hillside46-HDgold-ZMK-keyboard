@@ -19,3 +19,15 @@ include:
     shield: hillside46_left
   - board: nice_nano//zmk
     shield: hillside46_right
+  # Second keyboard ("B"): distinct BLE name so the host can tell the two
+  # boards apart, plus higher TX power for a more stable link.
+  # Only the left (central) half advertises the name; the right half
+  # gets its own build just for the TX power boost.
+  - board: nice_nano//zmk
+    shield: hillside46_left
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Hillside46-B\" -DCONFIG_BT_CTLR_TX_PWR_PLUS_8=y
+    artifact-name: hillside46_B_left
+  - board: nice_nano//zmk
+    shield: hillside46_right
+    cmake-args: -DCONFIG_BT_CTLR_TX_PWR_PLUS_8=y
+    artifact-name: hillside46_B_right
